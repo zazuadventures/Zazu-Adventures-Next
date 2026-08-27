@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f6f0;
+  --foreground: #172019;
+
+  --surface: #ffffff;
+  --surface-soft: #f1eee6;
+  --muted: #f1eee6;
+  --muted-foreground: #626961;
+
+  --border: #dfddd5;
+
+  --primary: #245c3a;
+  --primary-hover: #1c4b2e;
+  --primary-foreground: #ffffff;
+
+  --accent: #c79a5b;
+
+  --ring: #245c3a;
+}
+
+@theme inline {
+  --font-sans: "Roboto", Arial, Helvetica, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-accent: var(--accent);
+
+  --color-ring: var(--ring);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
