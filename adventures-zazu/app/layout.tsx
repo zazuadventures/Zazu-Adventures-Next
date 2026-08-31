@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import StructuredData from "@/components/seo/StructuredData";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -87,6 +88,7 @@ gtag('config', 'G-X2LTD9P8DS');`}
           </main>
 
           <Footer />
+          <Analytics />
         </div>
       </body>
     </html>
