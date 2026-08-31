@@ -8,6 +8,10 @@ export default function StructuredData({ siteUrl }: StructuredDataProps) {
     "@type": "TravelAgency",
     name: "Zazu Adventures",
     url: siteUrl,
+    description:
+      "Victoria Falls-based travel experiences, transfers and multi-day journeys across Southern Africa.",
+    logo: `${siteUrl}/images/general/zazulogo.png`,
+    areaServed: ["Zimbabwe", "Botswana", "Zambia", "Namibia", "South Africa"],
   };
 
   return (

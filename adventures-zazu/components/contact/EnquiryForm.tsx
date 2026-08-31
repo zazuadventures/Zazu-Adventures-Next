@@ -1,6 +1,7 @@
 "use client";
 
 import { type FormEvent, useState } from "react";
+import { CircleCheck } from "lucide-react";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -66,22 +67,31 @@ export default function EnquiryForm() {
     return (
       <div
         role="status"
-        className="border border-border bg-surface-soft p-8 sm:p-10"
+        className="border border-emerald-600/25 bg-emerald-50 p-8 sm:p-10"
       >
-        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary">
-          Enquiry received
-        </p>
-        <h2 className="mt-3 text-2xl font-semibold">
-          Thank you for contacting Zazu Adventures.
-        </h2>
-        <p className="mt-4 max-w-xl leading-7 text-muted-foreground">
-          Your enquiry has been sent successfully. We&apos;ll be in touch using
-          the contact details you provided.
-        </p>
+        <div className="flex items-start gap-4">
+          <CircleCheck
+            aria-hidden="true"
+            className="mt-1 size-8 shrink-0 text-emerald-600"
+            strokeWidth={2}
+          />
+          <div>
+            <p className="text-sm font-semibold text-emerald-700">
+              Enquiry received
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold">
+              Thank you for contacting Zazu Adventures.
+            </h2>
+            <p className="mt-4 max-w-xl leading-7 text-muted-foreground">
+              Your enquiry has been sent successfully. We&apos;ll be in touch using
+              the contact details you provided.
+            </p>
+          </div>
+        </div>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-7 rounded-full border border-border px-6 py-3 text-sm font-semibold hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="mt-7 rounded-full border border-emerald-700/30 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 hover:bg-emerald-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
         >
           Send another enquiry
         </button>

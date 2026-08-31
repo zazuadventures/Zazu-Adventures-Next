@@ -1,65 +1,73 @@
 import type { Metadata } from "next";
+import { MessageCircle } from "lucide-react";
 
 import EnquiryForm from "@/components/contact/EnquiryForm";
-import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import Container from "@/components/ui/Container";
+import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact Zazu Adventures to start planning your journey.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
     <>
-      <section className="border-b border-border bg-surface-soft">
-        <Container>
-          <div className="py-6">
-            <Breadcrumbs items={[{ label: "Contact" }]} />
-          </div>
-
-          <div className="max-w-3xl py-16 sm:py-24">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Contact Zazu Adventures
-            </p>
-
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Tell us about your trip.
-            </h1>
-
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Share your travel plans and we&apos;ll help you explore the next
-              steps for your journey.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow="Contact Zazu Adventures"
+        title="Tell us about your trip."
+        description="Share your travel plans and we&apos;ll help you explore the next steps for your journey."
+        image="/images/experiences/tour-around-zimbabwe-5.png"
+      />
 
       <section className="py-16 sm:py-20">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[1fr_360px]">
-            <EnquiryForm />
+          <EnquiryForm />
 
-            <aside className="h-fit border border-border bg-surface-soft p-6 sm:p-8">
-              <h2 className="text-xl font-semibold">Planning a trip?</h2>
+          <div className="mt-12 border-t border-border pt-10 sm:mt-16">
+            <h2 className="text-xl font-semibold">Reach us on socials</h2>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">
+              Follow Zazu Adventures and send us a message on your preferred platform.
+            </p>
 
-              <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                The more information you provide, the easier it is for us to
-                understand what you&apos;re looking for.
-              </p>
+            <div className="mt-6 flex items-center gap-3" aria-label="Zazu Adventures social media links">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="inline-flex size-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5 fill-current">
+                  <path d="M13.75 21v-8h2.7l.4-3h-3.1V8.08c0-.87.25-1.46 1.52-1.46H17V3.94c-.3-.04-1.33-.12-2.52-.12-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.78v8h3.47Z" />
+                </svg>
+              </a>
 
-              <div className="mt-8 border-t border-border pt-6">
-                <p className="text-sm font-medium">What can you ask us about?</p>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="inline-flex size-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
 
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
-                  <li>Experiences and tours</li>
-                  <li>Travel services</li>
-                  <li>Custom itineraries</li>
-                  <li>Destinations</li>
-                  <li>General travel enquiries</li>
-                </ul>
-              </div>
-            </aside>
+              <a
+                href="https://wa.me/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+                className="inline-flex size-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <MessageCircle aria-hidden="true" className="size-5" strokeWidth={1.8} />
+              </a>
+            </div>
           </div>
         </Container>
       </section>

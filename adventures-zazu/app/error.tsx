@@ -21,7 +21,7 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Something went wrong
           </p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight">
+          <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
             We couldn&apos;t load this page.
           </h1>
           <p className="mt-5 leading-7 text-muted-foreground">
