@@ -39,5 +39,11 @@ export function getExperienceCategoryPath(
 
     case "package":
       return "packages";
+
+    case "activity":
+      return "activities";
+
+    case "transfer":
+      return "transfers";
   }
 }

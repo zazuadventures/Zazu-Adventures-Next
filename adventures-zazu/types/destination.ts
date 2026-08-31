@@ -5,5 +5,6 @@ export type Destination = {
   country: string;
   description: string;
   image: string;
+  experienceSlug: string;
   featured?: boolean;
 };
