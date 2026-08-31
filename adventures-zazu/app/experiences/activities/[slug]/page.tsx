@@ -9,7 +9,6 @@ import ExperienceHighlights from "@/components/experiences/ExperienceHighlights"
 import ExperienceIncluded from "@/components/experiences/ExperienceIncluded";
 import ExperienceItinerary from "@/components/experiences/ExperienceItinerary";
 import ExperienceOverview from "@/components/experiences/ExperienceOverview";
-
 import {
   getExperienceBySlug,
   getExperiencesByCategory,
@@ -17,17 +16,13 @@ import {
 import { getExperienceMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return getExperiencesByCategory("day-trip").map(
-    (experience) => ({
-      slug: experience.slug,
-    })
-  );
+  return getExperiencesByCategory("activity").map((experience) => ({
+    slug: experience.slug,
+  }));
 }
 
 type PageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({
@@ -36,23 +31,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const experience = getExperienceBySlug(slug);
 
-  if (!experience) {
-    return {
-      title: "Experience Not Found",
-    };
+  if (!experience || experience.category !== "activity") {
+    return { title: "Activity Not Found" };
   }
 
-  return getExperienceMetadata(experience, "day-trips");
+  return getExperienceMetadata(experience, "activities");
 }
 
-export default async function DayTripPage({
-  params,
-}: PageProps) {
+export default async function ActivityPage({ params }: PageProps) {
   const { slug } = await params;
-
   const experience = getExperienceBySlug(slug);
 
-  if (!experience || experience.category !== "day-trip") {
+  if (!experience || experience.category !== "activity") {
     notFound();
   }
 

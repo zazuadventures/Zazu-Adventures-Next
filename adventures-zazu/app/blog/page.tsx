@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 
 import BlogCard from "@/components/blog/BlogCard";
-import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import Container from "@/components/ui/Container";
+import PageHero from "@/components/ui/PageHero";
 import { getAllBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Travel Journal",
   description:
     "Travel inspiration, destination ideas and planning information from Zazu Adventures.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
@@ -16,26 +17,12 @@ export default function BlogPage() {
 
   return (
     <>
-      <section className="border-b border-border bg-surface-soft">
-        <Container>
-          <div className="py-6">
-            <Breadcrumbs items={[{ label: "Travel Journal" }]} />
-          </div>
-
-          <div className="max-w-3xl py-16 sm:py-24">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Travel Journal
-            </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Ideas for your next journey.
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Travel inspiration, destination information and practical ideas
-              to help you plan your journey.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow="Travel Journal"
+        title="Ideas for your next journey."
+        description="Travel inspiration, destination information and practical ideas to help you plan your journey."
+        image="/images/blog/blog-hero.webp"
+      />
 
       <section className="py-16 sm:py-20">
         <Container>

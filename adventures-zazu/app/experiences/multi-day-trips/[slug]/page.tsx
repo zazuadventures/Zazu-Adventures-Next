@@ -13,6 +13,7 @@ import {
   getExperienceBySlug,
   getExperiencesByCategory,
 } from "@/lib/experiences";
+import { getExperienceMetadata } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -34,10 +35,7 @@ export async function generateMetadata({
     return { title: "Experience Not Found" };
   }
 
-  return {
-    title: experience.title,
-    description: experience.shortDescription,
-  };
+  return getExperienceMetadata(experience, "multi-day-trips");
 }
 
 export default async function MultiDayTripPage({ params }: PageProps) {

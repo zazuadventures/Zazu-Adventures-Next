@@ -7,39 +7,38 @@ import PaginatedExperienceGrid from "@/components/experiences/PaginatedExperienc
 import { getExperiencesByCategory } from "@/lib/experiences";
 
 export const metadata: Metadata = {
-  title: "Day Trips",
-  description:
-    "Explore full-day safaris, Chobe excursions and cross-border day trips from Victoria Falls.",
-  alternates: { canonical: "/experiences/day-trips" },
+  title: "Transfers",
+  description: "Arrange comfortable, reliable transfers for your journey.",
+  alternates: { canonical: "/experiences/transfers" },
 };
 
-type DayTripsPageProps = {
+type TransfersPageProps = {
   searchParams: Promise<{ page?: string }>;
 };
 
-export default async function DayTripsPage({
+export default async function TransfersPage({
   searchParams,
-}: DayTripsPageProps) {
-  const experiences = getExperiencesByCategory("day-trip");
+}: TransfersPageProps) {
+  const experiences = getExperiencesByCategory("transfer");
   const { page } = await searchParams;
 
   return (
     <>
       <PageHero
         eyebrow="Experiences"
-        title="Day Trips"
-        description="Explore full-day safari and cross-border experiences from Victoria Falls."
-        image="/images/experiences/chobe-day-safari.png"
+        title="Transfers"
+        description="Arrange comfortable, reliable transfers for your journey."
+        image="/images/experiences/victoria-falls-airport-transfer.png"
       />
 
       <section className="py-16 sm:py-20">
         <Container>
-          <ExperienceCategoryNav activeHref="/experiences/day-trips" />
+          <ExperienceCategoryNav activeHref="/experiences/transfers" />
           <div className="mt-12">
             <PaginatedExperienceGrid
               experiences={experiences}
               page={page}
-              basePath="/experiences/day-trips"
+              basePath="/experiences/transfers"
             />
           </div>
         </Container>

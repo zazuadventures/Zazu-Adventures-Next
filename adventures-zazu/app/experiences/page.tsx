@@ -1,70 +1,46 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
-import ExperienceGrid from "@/components/experiences/ExperienceGrid";
+import PageHero from "@/components/ui/PageHero";
+import ExperienceCategoryNav from "@/components/experiences/ExperienceCategoryNav";
+import PaginatedExperienceGrid from "@/components/experiences/PaginatedExperienceGrid";
 import { getAllExperiences } from "@/lib/experiences";
 
-const categories = [
-  {
-    title: "All Experiences",
-    href: "/experiences",
-  },
-  {
-    title: "Day Trips",
-    href: "/experiences/day-trips",
-  },
-  {
-    title: "Multi-Day Trips",
-    href: "/experiences/multi-day-trips",
-  },
-  {
-    title: "Packages",
-    href: "/experiences/packages",
-  },
-];
+export const metadata: Metadata = {
+  title: "Experiences",
+  description:
+    "Browse Victoria Falls activities, day trips, transfers and multi-day Southern Africa journeys.",
+  alternates: { canonical: "/experiences" },
+};
 
-export default function ExperiencesPage() {
+type ExperiencesPageProps = {
+  searchParams: Promise<{ page?: string }>;
+};
+
+export default async function ExperiencesPage({
+  searchParams,
+}: ExperiencesPageProps) {
   const experiences = getAllExperiences();
+  const { page } = await searchParams;
 
   return (
     <>
-      <section className="border-b border-border bg-surface-soft py-20 sm:py-28">
-        <Container>
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Experiences
-            </p>
-
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Discover your next adventure.
-            </h1>
-
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Explore day trips, multi-day journeys and travel packages
-              designed to help you experience more.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow="Experiences"
+        title="Discover your next adventure."
+        description="Explore activities, transfers and multi-day journeys designed to help you experience more."
+        image="/images/experiences/experience-hero.webp"
+      />
 
       <section className="py-16 sm:py-20">
         <Container>
-          <nav
-            aria-label="Experience categories"
-            className="flex flex-wrap gap-3"
-          >
-            {categories.map((category) => (
-              <Link
-                key={category.href}
-                href={category.href}
-                className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              >
-                {category.title}
-              </Link>
-            ))}
-          </nav>
+          <ExperienceCategoryNav activeHref="/experiences" />
 
           <div className="mt-12">
-            <ExperienceGrid experiences={experiences} />
+            <PaginatedExperienceGrid
+              experiences={experiences}
+              page={page}
+              basePath="/experiences"
+            />
           </div>
         </Container>
       </section>

@@ -14,6 +14,7 @@ import {
   getExperienceBySlug,
   getExperiencesByCategory,
 } from "@/lib/experiences";
+import { getExperienceMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getExperiencesByCategory("package").map(
@@ -41,10 +42,7 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: experience.title,
-    description: experience.shortDescription,
-  };
+  return getExperienceMetadata(experience, "packages");
 }
 
 export default async function PackagePage({

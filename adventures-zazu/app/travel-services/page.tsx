@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import Container from "@/components/ui/Container";
+import PageHero from "@/components/ui/PageHero";
 import ServiceCard from "@/components/services/ServiceCard";
 import { getAllServices } from "@/lib/services";
 
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   title: "Travel Services",
   description:
     "Explore travel planning and support services from Zazu Adventures.",
+  alternates: { canonical: "/travel-services" },
 };
 
 export default function TravelServicesPage() {
@@ -15,24 +17,12 @@ export default function TravelServicesPage() {
 
   return (
     <>
-      <section className="border-b border-border bg-surface-soft py-20 sm:py-28">
-        <Container>
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Travel Services
-            </p>
-
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Travel made simpler.
-            </h1>
-
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              From transfers and guided experiences to custom
-              itineraries, get help bringing your journey together.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow="Travel Services"
+        title="Travel services for your journey."
+        description="From private transfers and selected experiences to accommodation, itinerary design and practical travel planning, we help bring your trip together."
+        image="/images/travel-services/travel-services-hero.webp"
+      />
 
       <section className="py-16 sm:py-20">
         <Container>
