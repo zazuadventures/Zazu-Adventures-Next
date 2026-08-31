@@ -1,23 +1,32 @@
 import Hero from "@/components/home/Hero";
 import ExperienceCategories from "@/components/home/ExperienceCategories";
 import FeaturedExperiences from "@/components/home/FeaturedExperiences";
+import ParallaxJourney from "@/components/home/ParallaxJourney";
 import TravelServices from "@/components/home/TravelServices";
-import WhyZazu from "@/components/home/WhyZazu";
 import AboutPreview from "@/components/home/AboutPreview";
-import BlogPreview from "@/components/blog/BlogPreview";
-import HomeCTA from "@/components/home/HomeCTA";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import { googleTestimonials } from "@/data/testimonials";
+import BlogPreview from "@/components/home/BlogPreview";
+
+export const metadata: Metadata = {
+  title: "Zazu Adventures | Victoria Falls & Southern Africa Travel",
+  description:
+    "Discover Victoria Falls activities, safaris, transfers and multi-day journeys across Zimbabwe and Southern Africa with Zazu Adventures.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
     <>
       <Hero />
       <ExperienceCategories />
+      <ParallaxJourney />
       <FeaturedExperiences />
       <TravelServices />
-      <WhyZazu />
       <AboutPreview />
+      <TestimonialsSection items={googleTestimonials} />
       <BlogPreview />
-      <HomeCTA />
     </>
   );
 }
+import type { Metadata } from "next";

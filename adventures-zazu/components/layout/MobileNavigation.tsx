@@ -57,7 +57,7 @@ function MobileNavigationMenu({ pathname }: MobileNavigationMenuProps) {
         aria-controls="mobile-navigation"
         aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        className="relative z-50 inline-flex h-12 w-12 touch-manipulation items-center justify-center border border-white/50 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
         <span className="sr-only">
           {open ? "Close navigation menu" : "Open navigation menu"}
