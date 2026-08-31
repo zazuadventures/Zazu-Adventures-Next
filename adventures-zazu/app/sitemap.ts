@@ -6,9 +6,9 @@ import {
   getExperienceCategoryPath,
 } from "@/lib/experiences";
 import { getAllServices } from "@/lib/services";
+import { siteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   const now = new Date();
   const staticPages = [
     "",
@@ -17,9 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/experiences",
     "/experiences/day-trips",
+    "/experiences/activities",
     "/experiences/multi-day-trips",
-    "/experiences/packages",
+    "/experiences/transfers",
     "/destinations",
+    "/testimonials",
     "/travel-services",
   ];
   const experiencePages = getAllExperiences().map(
