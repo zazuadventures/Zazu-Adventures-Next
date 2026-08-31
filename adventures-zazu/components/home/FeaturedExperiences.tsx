@@ -1,40 +1,58 @@
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import Container from "../ui/Container";
 import ExperienceGrid from "../experiences/ExperienceGrid";
-import { getFeaturedExperiences } from "@/lib/experiences";
+import { getExperienceBySlug } from "@/lib/experiences";
+
+const featuredActivitySlugs = [
+  "victoria-falls-guided-walking-tour",
+  "zambezi-dinner-cruise",
+  "victoria-falls-wildlife-safari",
+  "boma-dinner-drum-show",
+  "victoria-falls-flight-of-the-angels",
+  "victoria-falls-big-cat-conservation-experience",
+] as const;
 
 export default function FeaturedExperiences() {
-  const experiences = getFeaturedExperiences();
+  const experiences = featuredActivitySlugs.flatMap((slug) => {
+    const experience = getExperienceBySlug(slug);
+
+    return experience?.category === "activity" ? [experience] : [];
+  });
 
   return (
-    <section className="bg-surface-soft py-20 sm:py-28">
+    <section className="bg-surface py-20 sm:py-28">
       <Container>
-        <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+        <div className="lg:flex lg:items-end lg:justify-between lg:gap-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Featured
+            <p className="text-md font-semibold text-accent">
+              Featured Experiences
             </p>
-
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-3xl">
               Start exploring.
             </h2>
-
-            <p className="mt-4 text-base leading-7 text-muted-foreground sm:text-lg">
-              Discover some of the experiences currently available through
-              Zazu Adventures.
-            </p>
           </div>
-
           <Link
             href="/experiences"
-            className="text-sm font-semibold text-primary hover:underline"
+            className="hidden shrink-0 items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:inline-flex"
           >
-            View all experiences →
+            Browse all experiences
+            <ChevronRight aria-hidden="true" className="size-4" />
           </Link>
         </div>
 
         <div className="mt-12">
           <ExperienceGrid experiences={experiences} />
+        </div>
+
+        <div className="mt-10 flex lg:hidden">
+          <Link
+            href="/experiences"
+            className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            Browse all experiences
+            <ChevronRight aria-hidden="true" className="size-4" />
+          </Link>
         </div>
       </Container>
     </section>

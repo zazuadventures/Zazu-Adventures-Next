@@ -13,45 +13,62 @@ export default function ExperienceItinerary({
   }
 
   return (
-    <section className="bg-surface-soft py-16 sm:py-20">
+    <section className="bg-surface py-16 sm:py-24">
       <Container>
         <div className="max-w-4xl">
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-accent">
+            Your Journey
+          </p>
+
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
             Itinerary
           </h2>
+        </div>
 
-          <div className="mt-10 space-y-10">
-            {itinerary.map((day) => (
-              <article
-                key={day.day}
-                className="border-l-2 border-primary pl-6 sm:pl-8"
-              >
-                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary">
-                  Day {day.day}
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {itinerary.map((day) => (
+            <article
+              key={day.day}
+              className="rounded-[1.25rem] bg-white p-6 text-left transition duration-300 sm:p-8"
+            >
+              <div className="mx-auto w-full max-w-2xl border-b border-[#203A4A]/10 pb-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-accent">
+                  Day {String(day.day).padStart(2, "0")}
                 </p>
-
-                <h3 className="mt-2 text-xl font-semibold">
+                <h3 className="mt-2 text-xl font-semibold tracking-tight text-[#223441] sm:text-2xl">
                   {day.title}
                 </h3>
+              </div>
 
-                <ul className="mt-5 space-y-3">
-                  {day.activities.map((activity) => (
-                    <li
-                      key={activity}
-                      className="flex gap-3 leading-7 text-muted-foreground"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground"
-                      />
+              <div className="mx-auto mt-6 w-full max-w-2xl text-left">
+                {day.activities.map((activity) => (
+                  <div
+                    key={activity.time}
+                    className="grid grid-cols-[42px_minmax(0,1fr)] gap-2 pb-5 last:pb-0"
+                  >
+                    <span className="text-sm font-semibold leading-7 text-[#223441]">
+                      {activity.time}
+                    </span>
 
-                      <span>{activity}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+                    <div>
+                      {activity.title && (
+                        <p className="font-semibold leading-7 text-[#223441]">
+                          {activity.title}
+                        </p>
+                      )}
+                      <p
+                        className={`leading-7 text-gray-600 ${
+                          activity.title ? "mt-1" : ""
+                        }`}
+                      >
+                        {activity.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </Container>
     </section>

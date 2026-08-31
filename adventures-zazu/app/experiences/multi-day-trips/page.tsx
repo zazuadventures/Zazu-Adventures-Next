@@ -1,93 +1,48 @@
-import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
-import ExperienceHero from "@/components/experiences/ExperienceHero";
-import ExperienceOverview from "@/components/experiences/ExperienceOverview";
-import ExperienceHighlights from "@/components/experiences/ExperienceHighlights";
-import ExperienceIncluded from "@/components/experiences/ExperienceIncluded";
-import ExperienceItinerary from "@/components/experiences/ExperienceItinerary";
-import ExperienceGallery from "@/components/experiences/ExperienceGallery";
-import ExperienceFAQs from "@/components/experiences/ExperienceFAQs";
-import ExperienceCTA from "@/components/experiences/ExperienceCTA";
+import Container from "@/components/ui/Container";
+import ExperienceCategoryNav from "@/components/experiences/ExperienceCategoryNav";
+import PaginatedExperienceGrid from "@/components/experiences/PaginatedExperienceGrid";
+import PageHero from "@/components/ui/PageHero";
+import { getExperiencesByCategory } from "@/lib/experiences";
 
-import {
-  getExperienceBySlug,
-  getExperiencesByCategory,
-} from "@/lib/experiences";
-
-export function generateStaticParams() {
-  return getExperiencesByCategory("multi-day-trip").map(
-    (experience) => ({
-      slug: experience.slug,
-    })
-  );
-}
-
-type PageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
+export const metadata: Metadata = {
+  title: "Multi-Day Trips",
+  description: "Discover immersive multi-day journeys across Southern Africa.",
+  alternates: { canonical: "/experiences/multi-day-trips" },
 };
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const experience = getExperienceBySlug(slug);
+type MultiDayTripsPageProps = {
+  searchParams: Promise<{ page?: string }>;
+};
 
-  if (!experience) {
-    return {
-      title: "Experience Not Found",
-    };
-  }
-
-  return {
-    title: experience.title,
-    description: experience.shortDescription,
-  };
-}
-
-export default async function MultiDayTripPage({
-  params,
-}: PageProps) {
-  const { slug } = await params;
-
-  const experience = getExperienceBySlug(slug);
-
-  if (
-    !experience ||
-    experience.category !== "multi-day-trip"
-  ) {
-    notFound();
-  }
+export default async function MultiDayTripsPage({
+  searchParams,
+}: MultiDayTripsPageProps) {
+  const experiences = getExperiencesByCategory("multi-day-trip");
+  const { page } = await searchParams;
 
   return (
     <>
-      <ExperienceHero experience={experience} />
-
-      <ExperienceOverview experience={experience} />
-
-      <ExperienceHighlights
-        highlights={experience.highlights}
+      <PageHero
+        eyebrow="Experiences"
+        title="Multi-Day Trips"
+        description="Discover immersive multi-day journeys across Southern Africa."
+        image="/images/experiences/tour-around-zimbabwe.png"
       />
 
-      <ExperienceIncluded
-        included={experience.included}
-        excluded={experience.excluded}
-      />
-
-      <ExperienceItinerary
-        itinerary={experience.itinerary}
-      />
-
-      <ExperienceGallery
-        title={experience.title}
-        gallery={experience.gallery}
-      />
-
-      <ExperienceFAQs faqs={experience.faqs} />
-
-      <ExperienceCTA />
+      <section className="py-16 sm:py-20">
+        <Container>
+          <ExperienceCategoryNav activeHref="/experiences/multi-day-trips" />
+          <div className="mt-12">
+            <PaginatedExperienceGrid
+              experiences={experiences}
+              page={page}
+              basePath="/experiences/multi-day-trips"
+            />
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

@@ -17,7 +17,7 @@ export default function ExperienceGallery({
   return (
     <section className="py-16 sm:py-20">
       <Container>
-        <h2 className="text-3xl font-semibold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
           Gallery
         </h2>
 

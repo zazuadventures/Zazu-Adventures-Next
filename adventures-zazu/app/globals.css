@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f6f0;
+  --background: #ffffff;
   --foreground: #172019;
 
   --surface: #ffffff;
@@ -11,17 +11,17 @@
 
   --border: #dfddd5;
 
-  --primary: #245c3a;
-  --primary-hover: #1c4b2e;
+  --primary: #223441;
+  --primary-hover: #223441;
   --primary-foreground: #ffffff;
 
   --accent: #c79a5b;
 
-  --ring: #245c3a;
+  --ring: #223441;
 }
 
 @theme inline {
-  --font-sans: "Roboto", Arial, Helvetica, sans-serif;
+  --font-sans: "Poppins", Arial, Helvetica, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -56,11 +56,22 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+@keyframes scroll-indicator {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1rem);
+  }
 }
 
 button,

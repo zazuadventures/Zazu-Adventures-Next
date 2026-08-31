@@ -23,14 +23,14 @@ const reasons = [
 
 export default function WhyZazu() {
   return (
-    <section className="bg-[#173322] py-20 text-white sm:py-28">
+    <section className="bg-primary py-20 text-white sm:py-28">
       <Container>
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#e2c18e]">
             Why Zazu
           </p>
 
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
             Travel should be about the experience.
           </h2>
 

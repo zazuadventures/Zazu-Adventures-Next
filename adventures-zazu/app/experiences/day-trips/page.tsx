@@ -1,39 +1,47 @@
+import type { Metadata } from "next";
+
 import Container from "@/components/ui/Container";
-import ExperienceGrid from "@/components/experiences/ExperienceGrid";
+import ExperienceCategoryNav from "@/components/experiences/ExperienceCategoryNav";
+import PageHero from "@/components/ui/PageHero";
+import PaginatedExperienceGrid from "@/components/experiences/PaginatedExperienceGrid";
 import { getExperiencesByCategory } from "@/lib/experiences";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Day Trips",
-  description: "Explore day trip experiences with Zazu Adventures.",
+  description:
+    "Explore full-day safaris, Chobe excursions and cross-border day trips from Victoria Falls.",
+  alternates: { canonical: "/experiences/day-trips" },
 };
 
-export default function DayTripsPage() {
+type DayTripsPageProps = {
+  searchParams: Promise<{ page?: string }>;
+};
+
+export default async function DayTripsPage({
+  searchParams,
+}: DayTripsPageProps) {
   const experiences = getExperiencesByCategory("day-trip");
+  const { page } = await searchParams;
 
   return (
     <>
-      <section className="border-b border-border bg-surface-soft py-20 sm:py-28">
-        <Container>
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Experiences
-            </p>
-
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Day Trips
-            </h1>
-
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Explore memorable destinations and experiences when you have
-              one day to make the most of your journey.
-            </p>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow="Experiences"
+        title="Day Trips"
+        description="Explore full-day safari and cross-border experiences from Victoria Falls."
+        image="/images/experiences/chobe-day-safari.png"
+      />
 
       <section className="py-16 sm:py-20">
         <Container>
-          <ExperienceGrid experiences={experiences} />
+          <ExperienceCategoryNav activeHref="/experiences/day-trips" />
+          <div className="mt-12">
+            <PaginatedExperienceGrid
+              experiences={experiences}
+              page={page}
+              basePath="/experiences/day-trips"
+            />
+          </div>
         </Container>
       </section>
     </>

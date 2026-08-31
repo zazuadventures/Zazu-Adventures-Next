@@ -16,7 +16,7 @@ export default function ExperienceFAQs({
     <section className="bg-surface-soft py-16 sm:py-20">
       <Container>
         <div className="max-w-3xl">
-          <h2 className="text-3xl font-semibold tracking-tight">
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
             Frequently asked questions
           </h2>
 

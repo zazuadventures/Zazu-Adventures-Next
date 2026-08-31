@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import Container from "@/components/ui/Container";
+import PageHero from "@/components/ui/PageHero";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/blog";
+import { siteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({ slug: post.slug }));
@@ -47,14 +49,13 @@ function ArticleStructuredData({
     publishedAt: string;
   };
 }) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   const data = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
-    author: { "@type": "Organization", name: post.author },
+    author: { "@type": "Person", name: post.author },
     mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
   };
 
@@ -84,52 +85,67 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <>
       <ArticleStructuredData post={post} />
-      <section className="border-b border-border bg-surface-soft">
-        <Container>
-          <div className="py-6">
-            <Breadcrumbs
-              items={[
-                { label: "Travel Journal", href: "/blog" },
-                { label: post.title },
-              ]}
-            />
-          </div>
-
-          <div className="max-w-4xl py-16 sm:py-24">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              {post.category}
-            </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-              {post.title}
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-              {post.excerpt}
-            </p>
-            <div className="mt-8 text-sm text-muted-foreground">
-              <span>{post.author}</span>
-              <span className="mx-2" aria-hidden="true">·</span>
-              <time dateTime={post.publishedAt}>{formattedDate}</time>
-            </div>
-          </div>
-        </Container>
-      </section>
-
+      <PageHero
+        eyebrow={formattedDate}
+        title={post.title}
+        image={post.image ?? "/images/experiences/tour-around-zimbabwe-2.png"}
+      />
       <article className="py-16 sm:py-20">
         <Container>
-          <div className="mx-auto max-w-3xl">
+          <div className="max-w-3xl">
             <div className="space-y-7 text-lg leading-8 text-muted-foreground">
-              {post.content.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+              {post.content.map((block, index) => {
+                if (block.type === "heading") {
+                  return (
+                    <h2 key={`${block.text}-${index}`} className="pt-5 text-2xl font-semibold tracking-tight text-foreground">
+                      {block.text}
+                    </h2>
+                  );
+                }
+
+                if (block.type === "list") {
+                  return (
+                    <ul key={`list-${index}`} className="list-disc space-y-2 pl-6 marker:text-primary">
+                      {block.items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  );
+                }
+
+                return <p key={`${block.text}-${index}`}>{block.text}</p>;
+              })}
             </div>
 
-            <div className="mt-16 border-t border-border pt-8">
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Link
+                href="/experiences/day-trips"
+                className="inline-flex rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Explore Victoria Falls tours
+              </Link>
               <Link
                 href="/contact"
-                className="inline-flex rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="inline-flex rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
-                Plan Your Journey
+                Plan your Zimbabwe adventure
               </Link>
+            </div>
+
+            <div className="mt-16 flex items-center gap-4 border-t border-border pt-8">
+              <Image
+                src="/images/general/zazulogo.png"
+                alt="Zazu Adventures logo"
+                width={56}
+                height={56}
+                className="size-14 rounded-full border border-border bg-surface object-contain p-1"
+              />
+              <div>
+                <p className="text-sm font-semibold text-accent">
+                  Author
+                </p>
+                <p className="mt-1 text-base font-semibold">{post.author}</p>
+              </div>
             </div>
           </div>
         </Container>
