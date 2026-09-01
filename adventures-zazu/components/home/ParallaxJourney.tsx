@@ -61,7 +61,7 @@ export default function ParallaxJourney() {
       <div className="absolute inset-0 bg-black/40" />
 
       <Container>
-        <div className="relative z-10 flex min-h-[560px] items-center py-24 sm:min-h-[620px]">
+        <div className="relative z-10 flex min-h-140 items-center py-24 sm:min-h-155">
           <div className="max-w-2xl">
             <p className="text-md font-semibold  text-[#ebc48b]">
               From Victoria Falls to Southern Africa, and beyond.

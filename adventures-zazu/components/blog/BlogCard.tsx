@@ -23,7 +23,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         href={`/blog/${post.slug}`}
         className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
-        <div className="relative aspect-[16/9] bg-surface-soft">
+        <div className="relative aspect-video bg-surface-soft">
           <span className="absolute left-4 top-4 z-10 bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground">
             {post.category}
           </span>

@@ -47,7 +47,7 @@ export default function ExperienceCategories() {
               className="group block overflow-hidden rounded-xs bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               {/* Image */}
-              <div className="relative aspect-[5/5] overflow-hidden">
+              <div className="relative aspect-5/5 overflow-hidden">
                 <Image
                   src={category.image}
                   alt={category.title}
@@ -57,7 +57,7 @@ export default function ExperienceCategories() {
                 />
 
                 {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
 
                 {/* Heading over image */}
                 <div className="absolute bottom-0 left-0 right-0 p-7">

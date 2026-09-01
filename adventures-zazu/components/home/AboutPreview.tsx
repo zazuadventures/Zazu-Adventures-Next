@@ -8,7 +8,7 @@ export default function AboutPreview() {
     <section className="py-20 bg-surface sm:py-28">
       <Container className="max-sm:px-6">
         <div className="grid gap-10 shadow-2xl rounded-xs lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[4/3] overflow-hidden bg-[#d9d5c9]">
+          <div className="relative aspect-4/3 overflow-hidden bg-[#d9d5c9]">
             <Image
               src="/images/experiences/home-about-zazu.webp"
               alt="Guests enjoying a Zazu Adventures experience"

@@ -101,7 +101,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
         </div>
       </div>
       <div className="mt-4 flex-1">
-        <p className="max-h-[6.5rem] overflow-y-auto pr-2 text-sm leading-7 text-muted-foreground">
+        <p className="max-h-26 overflow-y-auto pr-2 text-sm leading-7 text-muted-foreground">
           {testimonial.text}
         </p>
       </div>

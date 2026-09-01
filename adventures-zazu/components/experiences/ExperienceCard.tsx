@@ -27,7 +27,7 @@ export default function ExperienceCard({
       href={`/experiences/${categoryPath}/${experience.slug}`}
       className="group border border-border rounded-sm bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     >
-      <div className="relative aspect-[4/3] bg-surface-soft">
+      <div className="relative aspect-4/3 bg-surface-soft">
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src={experience.image}
@@ -44,7 +44,7 @@ export default function ExperienceCard({
             </span>
             <div
               aria-hidden="true"
-              className="absolute -bottom-2 left-0 h-0 w-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#223441]"
+              className="absolute -bottom-2 left-0 h-0 w-0 border-l-8 border-l-transparent border-t-8px border-t-[#223441]"
             />
           </div>
         ) : null}

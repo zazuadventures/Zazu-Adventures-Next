@@ -8,7 +8,7 @@ export default function Hero() {
       <HeroCarousel />
 
       <Container>
-        <div className="pointer-events-none relative z-10 flex min-h-[100svh] items-center justify-start py-24 text-left sm:min-h-[680px] sm:justify-center sm:text-center">
+        <div className="pointer-events-none relative z-10 flex min-h-svh items-center justify-start py-24 text-left sm:min-h-170 sm:justify-center sm:text-center">
           <div className="pointer-events-auto max-w-3xl sm:mx-auto">
             <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
               Discover Africa.

@@ -68,7 +68,7 @@ export default async function DestinationsPage({
                   href={`/experiences/${getExperienceCategoryPath(experience.category)}/${experience.slug}`}
                   className="group overflow-hidden border border-border rounded-xs bg-surface transition-colors hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-surface-soft">
+                  <div className="relative aspect-4/3 overflow-hidden bg-surface-soft">
                     <Image
                       src={destination.image}
                       alt={destination.name}

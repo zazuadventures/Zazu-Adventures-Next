@@ -800,12 +800,12 @@ export const experiences: Experience[] = [
     image:
       "/images/experiences/experience-victoria-falls-gorge-helicopter-flight-1.webp",
     gallery: [
-      "experience-victoria-falls-gorge-helicopter-flight-2.webp",
-      "experience-victoria-falls-gorge-helicopter-flight-3.webp",
-      "experience-victoria-falls-gorge-helicopter-flight-4.webp",
-      "experience-victoria-falls-gorge-helicopter-flight-5.webp",
-      "experience-victoria-falls-gorge-helicopter-flight-6.webp",
-      "experience-victoria-falls-gorge-helicopter-flight-7.webp",
+      "/images/experiences/experience-victoria-falls-gorge-helicopter-flight-2.webp",
+      "/images/experiences/experience-victoria-falls-gorge-helicopter-flight-3.webp",
+      "/images/experiences/experience-victoria-falls-gorge-helicopter-flight-4.webp",
+      "/images/experiences/experience-victoria-falls-gorge-helicopter-flight-5.webp",
+      "/images/experiences/experience-victoria-falls-gorge-helicopter-flight-6.webp",
+      "/images/experiences/experience-victoria-falls-gorge-helicopter-flight-7.webp",
     ],
     highlights: [
       "Aerial views of Victoria Falls",

@@ -154,7 +154,7 @@ export default function EnquiryForm() {
         />
       </div>
 
-      <div className="absolute -left-[9999px]" aria-hidden="true">
+      <div className="absolute left-[-9999px]" aria-hidden="true">
         <label htmlFor="website">Website</label>
         <input
           id="website"

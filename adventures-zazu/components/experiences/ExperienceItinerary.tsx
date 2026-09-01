@@ -41,9 +41,9 @@ export default function ExperienceItinerary({
               </div>
 
               <div className="mx-auto mt-6 w-full max-w-2xl text-left">
-                {day.activities.map((activity) => (
+                {day.activities.map((activity, activityIndex) => (
                   <div
-                    key={activity.time}
+                    key={`${activity.time}-${activityIndex}`}
                     className="grid grid-cols-[42px_minmax(0,1fr)] gap-2 pb-5 last:pb-0"
                   >
                     <span className="text-sm font-semibold leading-7 text-[#223441]">
