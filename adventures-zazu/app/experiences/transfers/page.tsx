@@ -28,7 +28,7 @@ export default async function TransfersPage({
         eyebrow="Experiences"
         title="Transfers"
         description="Arrange comfortable, reliable transfers for your journey."
-        image="/images/experiences/victoria-falls-airport-transfer.png"
+        image="/images/experiences/experience-transfers-hero.webp"
       />
 
       <section className="py-16 sm:py-20">

@@ -8,7 +8,7 @@ export const destinations: Destination[] = [
     country: "Zimbabwe",
     description:
       "The natural starting point for rainforest walks, river cruises, wildlife encounters and helicopter flights.",
-    image: "/images/experiences/tour-around-zimbabwe-4.png",
+    image: "/images/destinations/destinations-victoria-falls.webp",
     experienceSlug: "victoria-falls-guided-walking-tour",
     featured: true,
   },
@@ -20,7 +20,7 @@ export const destinations: Destination[] = [
     country: "Botswana",
     description:
       "A wildlife-rich day trip from Victoria Falls, known for riverfront scenery and exceptional elephant viewing.",
-    image: "/images/experiences/okavango-delta-day-trip.png",
+    image: "/images/destinations/destinations-chobe.webp",
     experienceSlug: "chobe-national-park-day-safari",
     featured: true,
   },
@@ -32,7 +32,7 @@ export const destinations: Destination[] = [
     country: "Zimbabwe",
     description:
       "Zimbabwe's leading safari destination, with wide open landscapes and some of Africa's largest elephant herds.",
-    image: "/images/experiences/kruger-national-park-day-tour.png",
+    image: "/images/destinations/destinations-hwange.webp",
     experienceSlug: "hwange-national-park-day-safari",
     featured: true,
   },
@@ -44,7 +44,7 @@ export const destinations: Destination[] = [
     country: "Zambia",
     description:
       "Cross the Victoria Falls Bridge to explore Zambia's viewpoints, river landscapes and the town of Livingstone.",
-    image: "/images/experiences/tour-around-zimbabwe-5.png",
+    image: "/images/destinations/destinations-livingstone.webp",
     experienceSlug: "livingstone-zambia-falls-day-experience",
     featured: true,
   },
@@ -56,7 +56,7 @@ export const destinations: Destination[] = [
     country: "Zimbabwe",
     description:
       "Travel further through Zimbabwe, combining Victoria Falls, Hwange, Matobo, Great Zimbabwe and Harare in one journey.",
-    image: "/images/experiences/tour-around-zimbabwe.png",
+    image: "/images/destinations/destinations-zimbabwe.webp",
     experienceSlug: "zimbabwe-grand-explorer",
     featured: true,
   },
@@ -68,7 +68,7 @@ export const destinations: Destination[] = [
     country: "Botswana",
     description:
       "A legendary wetland wilderness of channels, islands and wildlife, reached on a longer Botswana journey from Victoria Falls.",
-    image: "/images/experiences/okavango-delta-day-trip.png",
+    image: "/images/destinations/destinations-okavango.webp",
     experienceSlug: "victoria-falls-okavango-wild-journey",
     featured: true,
   },
@@ -80,7 +80,7 @@ export const destinations: Destination[] = [
     country: "South Africa",
     description:
       "Combine Cape Town's landscapes and culture with a Kruger safari before continuing to Victoria Falls and Chobe.",
-    image: "/images/experiences/cape-town-day-tour.png",
+    image: "/images/destinations/destinations-cape-town.webp",
     experienceSlug: "cape-town-kruger-victoria-falls-chobe",
     featured: true,
   },
@@ -92,7 +92,7 @@ export const destinations: Destination[] = [
     country: "Namibia",
     description:
       "Explore vast desert landscapes, dramatic coastlines and wildlife on a dedicated Namibia safari journey.",
-    image: "/images/experiences/tour-around-zimbabwe-6.png",
+    image: "/images/destinations/destinations-namibia.webp",
     experienceSlug: "ultimate-namibia-safari",
     featured: true,
   },

@@ -29,7 +29,7 @@ export default async function DayTripsPage({
         eyebrow="Experiences"
         title="Day Trips"
         description="Explore full-day safari and cross-border experiences from Victoria Falls."
-        image="/images/experiences/chobe-day-safari.png"
+        image="/images/experiences/experience-day-trips-hero.webp"
       />
 
       <section className="py-16 sm:py-20">

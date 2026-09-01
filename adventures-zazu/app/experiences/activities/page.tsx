@@ -28,7 +28,7 @@ export default async function ActivitiesPage({
         eyebrow="Experiences"
         title="Activities"
         description="Discover memorable cultural experiences and activities to add to your journey."
-        image="/images/experiences/boma-dinner-drum-show.png"
+        image="/images/experiences/experience-activities-hero.webp"
       />
 
       <section className="py-16 sm:py-20">
