@@ -28,7 +28,7 @@ export default async function MultiDayTripsPage({
         eyebrow="Experiences"
         title="Multi-Day Trips"
         description="Discover immersive multi-day journeys across Southern Africa."
-        image="/images/experiences/tour-around-zimbabwe.png"
+        image="/images/experiences/experience-multi-day-trips-hero.webp"
       />
 
       <section className="py-16 sm:py-20">
