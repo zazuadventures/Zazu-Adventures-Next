@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     author: "Shalom Andrew",
     publishedAt: "2025-09-25",
     featured: true,
-    image: "/images/experiences/tour-around-zimbabwe-2.png",
+    image: "/images/blog/blog-best-time-to-visit-victoria-falls.webp",
     content: [
       {
         type: "paragraph",
@@ -163,7 +163,7 @@ export const blogPosts: BlogPost[] = [
     author: "Shalom Andrew",
     publishedAt: "2026-02-12",
     featured: true,
-    image: "/images/experiences/tour-around-zimbabwe-6.png",
+    image: "/images/blog/blog-best-things-to-do-in-victoria-falls.webp",
     content: [
       {
         type: "paragraph",
@@ -295,7 +295,7 @@ export const blogPosts: BlogPost[] = [
     author: "Shalom Andrew",
     publishedAt: "2026-07-07",
     featured: true,
-    image: "/images/experiences/tour-around-zimbabwe-5.png",
+    image: "/images/blog/blog-three-days-in-victoria-falls-itinerary.webp",
     content: [
       {
         type: "paragraph",
