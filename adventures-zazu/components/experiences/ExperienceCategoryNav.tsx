@@ -2,10 +2,9 @@ import Link from "next/link";
 
 const categories = [
   { title: "All Experiences", href: "/experiences" },
+  { title: "Activities", href: "/experiences/activities" },
   { title: "Day Trips", href: "/experiences/day-trips" },
   { title: "Multi-Day Trips", href: "/experiences/multi-day-trips" },
-  { title: "Activities", href: "/experiences/activities" },
-  { title: "Transfers", href: "/experiences/transfers" },
 ];
 
 type ExperienceCategoryNavProps = {

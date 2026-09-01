@@ -29,7 +29,7 @@ export default function AboutPreview() {
 
             <Link
               href="/about"
-              className="mt-7 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="mt-7 mb-6 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               About Zazu Adventures
               <ChevronRight aria-hidden="true" className="size-4" />
