@@ -2794,7 +2794,7 @@ export const experiences: Experience[] = [
     destinationSlug: "victoria-falls",
     duration: "16 Days / 15 Nights",
     price: {
-      from: 0,
+      from: 4200,
       currency: "USD",
       per: "person",
       note: "Price calculated based on confirmed accommodation, activities and group size",
@@ -3309,7 +3309,7 @@ export const experiences: Experience[] = [
       type: "enquiry",
       availability: "on-request",
       minimumTravellers: 1,
-      priceFrom: 0,
+      priceFrom: 4200,
       currency: "USD",
     },
     featured: true,
@@ -3323,7 +3323,7 @@ export const experiences: Experience[] = [
     destinationSlug: "victoria-falls",
     duration: "5 Days / 4 Nights",
     price: {
-      from: 0,
+      from: 2850,
       currency: "USD",
       per: "person",
       note: "Price calculated based on selected accommodation and group size",
@@ -3603,7 +3603,7 @@ export const experiences: Experience[] = [
     destinationSlug: "victoria-falls",
     duration: "11 Days / 10 Nights",
     price: {
-      from: 0,
+      from: 3850,
       currency: "USD",
       per: "person",
       note: "Price based on accommodation category, safari activities and group size",
@@ -4039,7 +4039,7 @@ export const experiences: Experience[] = [
     destinationSlug: "cape-town",
     duration: "11 Days / 10 Nights",
     price: {
-      from: 0,
+      from: 4800,
       currency: "USD",
       per: "person",
       note: "Final price depends on accommodation, flights, travel dates and group size",
@@ -4449,7 +4449,7 @@ export const experiences: Experience[] = [
       type: "enquiry",
       availability: "on-request",
       minimumTravellers: 2,
-      priceFrom: 0,
+      priceFrom: 4000,
       currency: "USD",
     },
     featured: true,
@@ -4463,7 +4463,7 @@ export const experiences: Experience[] = [
     destinationSlug: "namibia",
     duration: "10 Days / 9 Nights",
     price: {
-      from: 0,
+      from: 4000,
       currency: "USD",
       per: "person",
       note: "Final price depends on accommodation, group size and travel dates",

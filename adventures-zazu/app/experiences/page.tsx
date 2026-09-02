@@ -3,12 +3,12 @@ import Container from "@/components/ui/Container";
 import PageHero from "@/components/ui/PageHero";
 import ExperienceCategoryNav from "@/components/experiences/ExperienceCategoryNav";
 import PaginatedExperienceGrid from "@/components/experiences/PaginatedExperienceGrid";
-import { getAllExperiences } from "@/lib/experiences";
+import { getExperiencesByCategory } from "@/lib/experiences";
 
 export const metadata: Metadata = {
   title: "Experiences",
   description:
-    "Browse Victoria Falls activities, day trips, transfers and multi-day Southern Africa journeys.",
+    "Browse Victoria Falls activities, day trips and multi-day Southern Africa journeys.",
   alternates: { canonical: "/experiences" },
 };
 
@@ -19,7 +19,11 @@ type ExperiencesPageProps = {
 export default async function ExperiencesPage({
   searchParams,
 }: ExperiencesPageProps) {
-  const experiences = getAllExperiences();
+  const experiences = [
+    ...getExperiencesByCategory("activity"),
+    ...getExperiencesByCategory("day-trip"),
+    ...getExperiencesByCategory("multi-day-trip"),
+  ];
   const { page } = await searchParams;
 
   return (
@@ -27,7 +31,7 @@ export default async function ExperiencesPage({
       <PageHero
         eyebrow="Experiences"
         title="Discover your next adventure."
-        description="Explore activities, transfers and multi-day journeys designed to help you experience more."
+        description="Explore activities, day trips and multi-day journeys designed to help you experience more."
         image="/images/experiences/experience-hero.webp"
       />
 

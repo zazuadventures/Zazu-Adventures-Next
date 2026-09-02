@@ -11,18 +11,18 @@ const categories = [
     image: "/images/home/home-activities.webp",
   },
   {
-    title: "Multi-Day Trips",
-    description:
-      "Slow down, explore further and experience more with thoughtfully planned journeys.",
-    href: "/experiences/multi-day-trips",
-    image: "/images/home/home-multi-day.webp",
-  },
-  {
     title: "Day Trips",
     description:
       "Make the most of a day with full-day safari and cross-border experiences.",
     href: "/experiences/day-trips",
     image: "/images/home/home-day-trips.webp",
+  },
+  {
+    title: "Multi-Day Trips",
+    description:
+      "Slow down, explore further and experience more with thoughtfully planned journeys.",
+    href: "/experiences/multi-day-trips",
+    image: "/images/home/home-multi-day.webp",
   },
 ];
 
