@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import MobileNavigation from "@/components/layout/MobileNavigation";
 import Container from "@/components/ui/Container";
@@ -14,9 +15,26 @@ function isActivePath(pathname: string, href: string): boolean {
 
 export default function Header() {
   const pathname = usePathname();
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setHasScrolled(window.scrollY > 8);
+
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50  border-white/20 bg-transparent text-white">
+    <header
+      className={[
+        "fixed inset-x-0 top-0 z-50 text-white transition-[background-color,box-shadow] duration-200 lg:absolute",
+        hasScrolled
+          ? "bg-primary/95 shadow-lg backdrop-blur-sm lg:bg-transparent lg:shadow-none lg:backdrop-blur-none"
+          : "bg-transparent",
+      ].join(" ")}
+    >
       <Container>
         <div className="flex h-20 items-center justify-between gap-6">
           <Link
