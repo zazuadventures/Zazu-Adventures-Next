@@ -145,6 +145,162 @@ export const experiences: Experience[] = [
     featured: true,
   },
   {
+    id: "devils-pool-livingstone-island",
+    slug: "devils-pool-livingstone-island",
+    title: "Devil's Pool at Livingstone Island",
+    category: "activity",
+    destination: "Victoria Falls",
+    destinationSlug: "victoria-falls",
+    duration: "2-3 Hours",
+    price: {
+      from: 210,
+      currency: "USD",
+      per: "person",
+      note: "Price on request; transfers available separately",
+    },
+    shortDescription:
+      "Swim in the famous Devil's Pool on the edge of Victoria Falls and explore Livingstone Island on the Zambian side of the Zambezi River.",
+    description:
+      "Experience one of Victoria Falls' most famous adventures with a guided visit to Livingstone Island and Devil's Pool. Travel by boat across the Zambezi River to Livingstone Island, explore the island with an experienced guide and, when water levels are safe, take a thrilling swim in Devil's Pool at the edge of Victoria Falls.",
+    image: "/images/experiences/experience-devils-pool-1.webp",
+    gallery: [
+      "/images/experiences/experience-devils-pool-2.webp",
+      "/images/experiences/experience-devils-pool-3.webp",
+      "/images/experiences/experience-devils-pool-4.webp",
+      "/images/experiences/experience-devils-pool-5.webp",
+      "/images/experiences/experience-devils-pool-6.webp",
+      "/images/experiences/experience-devils-pool-7.webp",
+      "/images/experiences/experience-devils-pool-8.webp",
+    ],
+    highlights: [
+      "Visit Livingstone Island",
+      "Boat ride across the Zambezi River",
+      "Swim in Devil's Pool when conditions permit",
+      "Stand at the edge of Victoria Falls",
+      "Guided Livingstone Island experience",
+      "Spectacular views of Victoria Falls",
+      "Small-group experience",
+      "Experienced guides and safety briefing",
+    ],
+    included: [
+      "Livingstone Island experience",
+      "Boat transfer to and from Livingstone Island",
+      "Professional guide",
+      "Guided island tour",
+      "Devil's Pool swim when water levels permit",
+      "Safety briefing",
+    ],
+    excluded: [
+      "Hotel transfers unless specifically selected",
+      "Personal purchases",
+      "Tips and gratuities",
+      "Travel insurance",
+      "Meals unless included in the selected tour",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Livingstone Island & Devil's Pool",
+        location: "Livingstone Island, Zambia",
+        activities: [
+          {
+            time: "07:15",
+            title: "Meet at the Launch Site",
+            description:
+              "Meet your guide at the Livingstone Island launch site on the Zambian side of the Zambezi River. Exact meeting time depends on the selected departure.",
+          },
+          {
+            time: "07:30",
+            title: "Boat Ride to Livingstone Island",
+            description:
+              "Travel by boat across the Zambezi River towards Livingstone Island, located close to the edge of Victoria Falls.",
+          },
+          {
+            time: "07:45",
+            title: "Explore Livingstone Island",
+            description:
+              "Enjoy a guided walk around Livingstone Island while learning about its history and taking in spectacular views of Victoria Falls.",
+          },
+          {
+            time: "08:00",
+            title: "Devil's Pool Experience",
+            description:
+              "When river conditions are safe and Devil's Pool is open, take a guided swim to the natural rock pool at the edge of Victoria Falls.",
+          },
+          {
+            time: "08:30",
+            title: "Victoria Falls Views",
+            description:
+              "Enjoy the dramatic views from Livingstone Island and take photographs with the Falls and Zambezi River surrounding you.",
+          },
+          {
+            time: "09:00",
+            title: "Return Boat Ride",
+            description:
+              "Board the boat and travel back across the Zambezi River to the Livingstone Island launch site.",
+          },
+          {
+            time: "09:15",
+            title: "Activity Ends",
+            description:
+              "The Livingstone Island and Devil's Pool experience concludes at the launch site.",
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Devil's Pool?",
+        answer:
+          "Devil's Pool is located beside Livingstone Island on the Zambian side of Victoria Falls.",
+      },
+      {
+        question: "Is Devil's Pool open all year?",
+        answer:
+          "No. Devil's Pool is seasonal and can only operate when Zambezi River water levels and currents are considered safe. It is generally available during the low-water season, around August to January, but exact opening dates depend on river conditions.",
+      },
+      {
+        question: "Do I need to visit Livingstone Island to access Devil's Pool?",
+        answer:
+          "Yes. Devil's Pool is accessed from Livingstone Island, with the journey beginning from the Zambian side of the Zambezi River.",
+      },
+      {
+        question: "Is Devil's Pool suitable for children?",
+        answer:
+          "Age restrictions apply and participation depends on the operator's current safety requirements. Check the age requirement when making your booking.",
+      },
+      {
+        question: "What happens if Devil's Pool is closed?",
+        answer:
+          "If water levels are too high or conditions are not considered safe, Devil's Pool will not operate. An alternative Livingstone Island experience or another suitable pool may be offered depending on the conditions and selected tour.",
+      },
+    ],
+    seo: {
+      metaTitle: "Devil's Pool Livingstone Island | Victoria Falls Zambia",
+      metaDescription:
+        "Experience Devil's Pool and Livingstone Island at Victoria Falls. Take a guided boat trip across the Zambezi and swim at the edge of the Falls when conditions permit.",
+      keywords: [
+        "Devil's Pool Victoria Falls",
+        "Devil's Pool Livingstone Island",
+        "Livingstone Island tour",
+        "Devil's Pool Zambia",
+        "Victoria Falls Devil's Pool",
+        "Livingstone Island Zambia",
+        "Devil's Pool experience",
+        "Victoria Falls activities",
+      ],
+      canonicalSlug: "devils-pool-livingstone-island",
+    },
+    booking: {
+      type: "enquiry",
+      availability: "on-request",
+      minimumTravellers: 1,
+      priceFrom: 0,
+      currency: "USD",
+    },
+    featured: true,
+  },
+  {
     id: "zambezi-dinner-cruise",
     slug: "zambezi-dinner-cruise",
     title: "Zambezi Sunset Dinner Cruise",
@@ -1864,7 +2020,7 @@ export const experiences: Experience[] = [
     destinationSlug: "victoria-falls",
     duration: "Full Day",
     price: {
-      from: 205,
+      from: 275,
       currency: "USD",
       per: "person",
       note: "From price per person",

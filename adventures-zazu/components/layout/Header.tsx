@@ -31,7 +31,7 @@ export default function Header() {
       className={[
         "fixed inset-x-0 top-0 z-50 text-white transition-[background-color,box-shadow] duration-200 lg:absolute",
         hasScrolled
-          ? "bg-primary/95 shadow-lg backdrop-blur-sm lg:bg-transparent lg:shadow-none lg:backdrop-blur-none"
+          ? "bg-white/95 text-primary shadow-lg backdrop-blur-sm"
           : "bg-transparent",
       ].join(" ")}
     >
@@ -66,8 +66,12 @@ export default function Header() {
                   className={[
                     "text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white",
                     active
-                      ? "text-white"
-                      : "text-white/80 hover:text-white",
+                      ? hasScrolled
+                        ? "text-primary"
+                        : "text-white"
+                      : hasScrolled
+                        ? "text-primary/75 hover:text-primary"
+                        : "text-white/80 hover:text-white",
                   ].join(" ")}
                   aria-current={active ? "page" : undefined}
                 >
@@ -77,13 +81,18 @@ export default function Header() {
             })}
             <Link
               href="/contact"
-              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-primary transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className={[
+                "rounded-full px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2",
+                hasScrolled
+                  ? "bg-primary text-white focus-visible:ring-primary"
+                  : "bg-white text-primary focus-visible:ring-white",
+              ].join(" ")}
             >
               Make an Enquiry
             </Link>
           </nav>
 
-          <MobileNavigation />
+          <MobileNavigation hasScrolled={hasScrolled} />
         </div>
       </Container>
     </header>

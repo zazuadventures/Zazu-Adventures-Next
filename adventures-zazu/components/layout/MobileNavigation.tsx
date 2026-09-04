@@ -12,17 +12,31 @@ function isActivePath(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export default function MobileNavigation() {
+type MobileNavigationProps = {
+  hasScrolled: boolean;
+};
+
+export default function MobileNavigation({ hasScrolled }: MobileNavigationProps) {
   const pathname = usePathname();
 
-  return <MobileNavigationMenu key={pathname} pathname={pathname} />;
+  return (
+    <MobileNavigationMenu
+      key={pathname}
+      pathname={pathname}
+      hasScrolled={hasScrolled}
+    />
+  );
 }
 
 type MobileNavigationMenuProps = {
   pathname: string;
+  hasScrolled: boolean;
 };
 
-function MobileNavigationMenu({ pathname }: MobileNavigationMenuProps) {
+function MobileNavigationMenu({
+  pathname,
+  hasScrolled,
+}: MobileNavigationMenuProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -77,7 +91,12 @@ function MobileNavigationMenu({ pathname }: MobileNavigationMenuProps) {
         aria-controls="mobile-navigation"
         aria-label="Open navigation menu"
         onClick={() => setOpen(true)}
-        className="inline-flex h-11 items-center gap-2 px-1 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        className={[
+          "inline-flex h-11 items-center gap-2 px-1 text-sm font-semibold uppercase tracking-[0.14em] transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2",
+          hasScrolled
+            ? "text-primary focus-visible:ring-primary"
+            : "text-white focus-visible:ring-white",
+        ].join(" ")}
       >
         <span>Menu</span>
         <svg
