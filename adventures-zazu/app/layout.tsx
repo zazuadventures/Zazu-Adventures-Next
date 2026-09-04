@@ -59,7 +59,7 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6841829695580768"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X2LTD9P8DS"
