@@ -55,6 +55,13 @@ export default function RootLayout({
     <html lang="en" className={poppins.variable}>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <Script
+          id="google-adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6841829695580768"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X2LTD9P8DS"
           strategy="afterInteractive"
         />
