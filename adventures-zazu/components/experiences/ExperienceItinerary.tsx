@@ -44,11 +44,17 @@ export default function ExperienceItinerary({
                 {day.activities.map((activity, activityIndex) => (
                   <div
                     key={`${activity.time}-${activityIndex}`}
-                    className="grid grid-cols-[42px_minmax(0,1fr)] gap-2 pb-5 last:pb-0"
+                    className={`pb-5 last:pb-0 ${
+                      activity.time
+                        ? "grid grid-cols-[42px_minmax(0,1fr)] gap-2"
+                        : ""
+                    }`}
                   >
-                    <span className="text-sm font-semibold leading-7 text-[#223441]">
-                      {activity.time}
-                    </span>
+                    {activity.time && (
+                      <span className="text-sm font-semibold leading-7 text-[#223441]">
+                        {activity.time}
+                      </span>
+                    )}
 
                     <div>
                       {activity.title && (
