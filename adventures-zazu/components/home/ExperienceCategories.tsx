@@ -4,6 +4,13 @@ import Container from "../ui/Container";
 
 const categories = [
   {
+    title: "Multi-Day Trips",
+    description:
+      "Slow down, explore further and experience more with thoughtfully planned journeys.",
+    href: "/experiences/multi-day-trips",
+    image: "/images/home/home-multi-day.webp",
+  },
+  {
     title: "Activities",
     description:
       "Discover memorable experiences, from wildlife encounters to Victoria Falls adventures.",
@@ -16,13 +23,6 @@ const categories = [
       "Make the most of a day with full-day safari and cross-border experiences.",
     href: "/experiences/day-trips",
     image: "/images/home/home-day-trips.webp",
-  },
-  {
-    title: "Multi-Day Trips",
-    description:
-      "Slow down, explore further and experience more with thoughtfully planned journeys.",
-    href: "/experiences/multi-day-trips",
-    image: "/images/home/home-multi-day.webp",
   },
 ];
 

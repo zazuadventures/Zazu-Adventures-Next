@@ -21,7 +21,7 @@ export default function TravelServicesPage() {
         eyebrow="Travel Services"
         title="Travel services for your journey."
         description="From private transfers and selected experiences to accommodation, itinerary design and practical travel planning, we help bring your trip together."
-        image="/images/travel-services/travel-services-hero.webp"
+        image="/images/travel-services/travel-services-transfers.webp"
       />
 
       <section className="py-16 sm:py-20">

@@ -11,8 +11,9 @@ export type ItineraryDay = {
   location?: string;
   overnight?: string;
   meals?: string[];
+  includedValue?: string;
   activities: {
-    time: string;
+    time?: string;
     title?: string;
     description: string;
   }[];
