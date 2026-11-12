@@ -34,7 +34,7 @@ export type Experience = {
   destinationSlug: string;
   duration: string;
   price?: {
-    from: number;
+    from?: number;
     currency: string;
     per: string;
     note: string;
@@ -81,7 +81,7 @@ export type Experience = {
     type: "enquiry";
     availability: "on-request";
     minimumTravellers: number;
-    priceFrom: number;
+    priceFrom?: number;
     currency: string;
   };
 

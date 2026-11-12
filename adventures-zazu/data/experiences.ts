@@ -260,7 +260,8 @@ export const experiences: Experience[] = [
           "No. Devil's Pool is seasonal and can only operate when Zambezi River water levels and currents are considered safe. It is generally available during the low-water season, around August to January, but exact opening dates depend on river conditions.",
       },
       {
-        question: "Do I need to visit Livingstone Island to access Devil's Pool?",
+        question:
+          "Do I need to visit Livingstone Island to access Devil's Pool?",
         answer:
           "Yes. Devil's Pool is accessed from Livingstone Island, with the journey beginning from the Zambian side of the Zambezi River.",
       },
@@ -1353,6 +1354,113 @@ export const experiences: Experience[] = [
     },
   },
   {
+    id: "victoria-falls-to-kasane-airport-private-transfer",
+    slug: "victoria-falls-to-kasane-airport-private-transfer",
+    title: "Zazu Private Airport and Crossborder Transfer",
+    category: "transfer",
+    destination: "Victoria Falls",
+    destinationSlug: "victoria-falls",
+    duration: "Varies by route",
+    price: {
+      currency: "USD",
+      per: "route",
+      note: "Price confirmed before booking",
+    },
+    shortDescription:
+      "Arrange a private airport or cross-border transfer in Victoria Falls, Livingstone or Kasane, with a tailored rate confirmed before booking.",
+    description:
+      "Arrange a private transfer in Victoria Falls, Livingstone or Kasane, including Victoria Falls Airport pick-ups and drop-offs and cross-border journeys between these areas. Share your preferred route, pick-up and drop-off points, travel date, passenger numbers and luggage details so the service can be tailored to your trip. Rates vary according to the route and arrangements required; Zazu Adventures will confirm your rate with you before your booking is accepted.",
+    image:
+      "/images/experiences/zazu-private-crossborder-and-airport-transfers.jpeg",
+    gallery: [],
+    highlights: [
+      "Transfers in Victoria Falls, Livingstone and Kasane",
+      "Victoria Falls Airport pick-up and drop-off",
+      "Cross-border arrangements between the service areas",
+      "Route and pick-up tailored to your plans",
+      "Comfortable private vehicle",
+      "Experienced local driver",
+      "Luggage assistance",
+    ],
+    included: [
+      "Private transfer for the confirmed route",
+      "Professional local driver",
+      "Private transfer vehicle",
+      "Pick-up and drop-off at the agreed locations",
+      "Luggage assistance",
+      "Cross-border transfer arrangements where applicable",
+    ],
+    excluded: [
+      "Visa fees",
+      "Immigration or border fees where applicable",
+      "Travel insurance",
+      "Personal expenses",
+      "Meals and drinks",
+      "Tips and gratuities",
+      "Additional sightseeing stops",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Your Selected Airport or Cross-Border Transfer",
+        location: "Victoria Falls, Livingstone or Kasane",
+        activities: [
+          {
+            title: "Confirm Your Route and Rate",
+            description:
+              "Share your travel date, preferred pick-up and drop-off points, passenger numbers and luggage details. Your rate will be confirmed before your booking is accepted.",
+          },
+          {
+            title: "Meet Your Driver",
+            description:
+              "Meet your driver at the agreed accommodation or airport pick-up point and receive assistance with your luggage.",
+          },
+          {
+            title: "Cross the Border if Required",
+            description:
+              "For cross-border routes, allow time for border formalities. Travellers are responsible for carrying valid passports, visas and any required travel documents.",
+          },
+          {
+            title: "Arrive at Your Destination",
+            description:
+              "Travel to the confirmed drop-off point in Victoria Falls, Livingstone or Kasane.",
+          },
+        ],
+      },
+    ],
+    faqs: [],
+    seo: {
+      metaTitle:
+        "Zazu Private Airport and Crossborder Transfers | Victoria Falls, Livingstone & Kasane",
+      metaDescription:
+        "Arrange private airport and cross-border transfers in Victoria Falls, Livingstone and Kasane. Rates are tailored to your route and confirmed before booking.",
+      keywords: [
+        "Zazu Private Airport and Crossborder Transfer",
+        "Victoria Falls to Kasane Airport transfer",
+        "Victoria Falls to Kasane transfer",
+        "Victoria Falls Kasane private transfer",
+        "Livingstone private airport transfer",
+        "Kasane private airport transfer",
+        "Victoria Falls Airport transfer",
+        "Livingstone Kasane cross-border transfer",
+        "Victoria Falls to Botswana transfer",
+        "Victoria Falls Kasane Airport shuttle",
+        "Victoria Falls to Kasane Airport private transfer",
+        "Zimbabwe to Botswana transfer",
+        "Kazungula border transfer",
+        "Victoria Falls Botswana transfer",
+        "Kasane Airport transfer",
+      ],
+      canonicalSlug: "victoria-falls-to-kasane-airport-private-transfer",
+    },
+    booking: {
+      type: "enquiry",
+      availability: "on-request",
+      minimumTravellers: 1,
+      currency: "USD",
+    },
+  },
+  {
     id: "victoria-falls-guided-walking-tour",
     slug: "victoria-falls-guided-walking-tour",
     title: "Victoria Falls Guided Walking Tour",
@@ -1360,7 +1468,7 @@ export const experiences: Experience[] = [
     destination: "Victoria Falls",
     destinationSlug: "victoria-falls",
     duration: "2 Hours",
-    price: { from: 30, currency: "USD", per: "person", note: "Per person" },
+    price: { from: 40, currency: "USD", per: "person", note: "Per person" },
     shortDescription:
       "Walk through the rainforest with a knowledgeable local guide and discover the history, geology and natural wonder of Victoria Falls.",
     description:
@@ -1487,7 +1595,7 @@ export const experiences: Experience[] = [
       type: "enquiry",
       availability: "on-request",
       minimumTravellers: 1,
-      priceFrom: 30,
+      priceFrom: 40,
       currency: "USD",
     },
   },
@@ -1509,8 +1617,7 @@ export const experiences: Experience[] = [
       "Enjoy a convenient private transfer between Victoria Falls Airport and your accommodation in Victoria Falls.",
     description:
       "Start or finish your Victoria Falls trip with a comfortable airport transfer. Your driver will meet you at Victoria Falls Airport, assist with your luggage and provide a direct transfer to your hotel, lodge or selected accommodation in Victoria Falls. The service is also available for transfers from your accommodation to the airport for your departure.",
-    image:
-      "/images/experiences/private-airport-transfer.webp",
+    image: "/images/experiences/private-airport-transfer.webp",
     gallery: [],
     highlights: [
       "Victoria Falls Airport transfer",
@@ -1593,135 +1700,6 @@ export const experiences: Experience[] = [
     },
   },
   {
-    id: "victoria-falls-to-kasane-airport-private-transfer",
-    slug: "victoria-falls-to-kasane-airport-private-transfer",
-    title: "Victoria Falls to Kasane Airport Private Transfer",
-    category: "transfer",
-    destination: "Victoria Falls",
-    destinationSlug: "victoria-falls",
-    duration: "Approximately 2 Hours",
-    price: {
-      from: 180,
-      currency: "USD",
-      per: "vehicle",
-      note: "Private transfer, from price per vehicle",
-    },
-    shortDescription:
-      "Travel comfortably from Victoria Falls to Kasane Airport with a private door-to-door transfer and an experienced local driver.",
-    description:
-      "Enjoy a comfortable and convenient private transfer from Victoria Falls to Kasane Airport in Botswana. Your driver collects you directly from your hotel or lodge in Victoria Falls, assists with your luggage and drives you safely towards the Kazungula border before continuing to Kasane Airport. Designed for travellers connecting Victoria Falls with Botswana's Chobe region, this private transfer provides a relaxed and convenient alternative to shared transport.",
-    image:
-      "/images/experiences/private-airport-transferr.webp",
-    gallery: [],
-    highlights: [
-      "Private Victoria Falls to Kasane Airport transfer",
-      "Door-to-door service",
-      "Comfortable private vehicle",
-      "Experienced local driver",
-      "Hotel or lodge pick-up",
-      "Luggage assistance",
-      "Kazungula border crossing",
-      "Direct airport drop-off",
-      "Ideal for connecting Zimbabwe and Botswana",
-    ],
-    included: [
-      "Private one-way transfer",
-      "Professional local driver",
-      "Private transfer vehicle",
-      "Hotel or lodge pick-up in Victoria Falls",
-      "Kasane Airport drop-off",
-      "Luggage assistance",
-      "Border crossing guidance",
-    ],
-    excluded: [
-      "Visa fees",
-      "Immigration or border fees where applicable",
-      "Travel insurance",
-      "Personal expenses",
-      "Meals and drinks",
-      "Tips and gratuities",
-      "Additional sightseeing stops",
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: "Victoria Falls to Kasane Airport",
-        location: "Victoria Falls, Zimbabwe → Kasane Airport, Botswana",
-        activities: [
-          {
-            time: "07:00",
-            title: "Hotel Pick-Up",
-            description:
-              "Meet your private driver at your Victoria Falls hotel or lodge. Your driver will assist with your luggage before beginning the journey to Kasane Airport.",
-          },
-          {
-            time: "07:15",
-            title: "Depart Victoria Falls",
-            description:
-              "Leave Victoria Falls and begin your private journey towards the Kazungula border and Botswana.",
-          },
-          {
-            time: "08:15",
-            title: "Arrive at the Border",
-            description:
-              "Reach the Zimbabwe–Botswana border area and prepare for immigration and customs procedures.",
-          },
-          {
-            time: "08:30",
-            title: "Border Formalities",
-            description:
-              "Complete the required immigration and customs procedures before continuing into Botswana. Travellers are responsible for carrying valid passports, visas and any required travel documentation.",
-          },
-          {
-            time: "09:00",
-            title: "Continue to Kasane",
-            description:
-              "Continue the journey through Botswana towards Kasane while enjoying the surrounding landscape.",
-          },
-          {
-            time: "09:30",
-            title: "Arrive in Kasane",
-            description:
-              "Arrive in the Kasane area and continue towards the airport for your departure.",
-          },
-          {
-            time: "09:45",
-            title: "Kasane Airport Drop-Off",
-            description:
-              "Arrive at Kasane Airport with sufficient time for your onward flight, depending on your confirmed departure schedule.",
-          },
-        ],
-      },
-    ],
-    faqs: [],
-    seo: {
-      metaTitle:
-        "Victoria Falls to Kasane Airport Private Transfer | Zimbabwe to Botswana",
-      metaDescription:
-        "Book a private transfer from Victoria Falls to Kasane Airport. Enjoy comfortable door-to-door transport with an experienced local driver via the Kazungula border.",
-      keywords: [
-        "Victoria Falls to Kasane Airport transfer",
-        "Victoria Falls to Kasane transfer",
-        "Victoria Falls Kasane private transfer",
-        "Victoria Falls to Botswana transfer",
-        "Victoria Falls Kasane Airport shuttle",
-        "Victoria Falls to Kasane Airport private transfer",
-        "Zimbabwe to Botswana transfer",
-        "Kazungula border transfer",
-        "Victoria Falls Botswana transfer",
-        "Kasane Airport transfer",
-      ],
-      canonicalSlug: "victoria-falls-to-kasane-airport-private-transfer",
-    },
-    booking: {
-      type: "enquiry",
-      availability: "on-request",
-      minimumTravellers: 1,
-      priceFrom: 180,
-      currency: "USD",
-    },
-  },
-  {
     id: "victoria-falls-to-livingstone-private-transfer",
     slug: "victoria-falls-to-livingstone-private-transfer",
     title: "Victoria Falls to Livingstone Private Transfer",
@@ -1739,8 +1717,7 @@ export const experiences: Experience[] = [
       "Travel comfortably from Victoria Falls to Livingstone with a private transfer, professional driver and assistance at the border.",
     description:
       "Travel from Victoria Falls in Zimbabwe to Livingstone in Zambia with a comfortable private transfer. Your driver will collect you from your hotel or lodge, assist with your luggage and take you across the Victoria Falls Bridge and into Zambia. Continue comfortably to Livingstone Town, your hotel or Harry Mwanga Nkumbula International Airport, depending on your selected drop-off.",
-    image:
-      "/images/experiences/travel-services-private-transfers.webp",
+    image: "/images/experiences/travel-services-private-transfers.webp",
     gallery: [],
     highlights: [
       "Private Victoria Falls to Livingstone transfer",
@@ -2032,7 +2009,7 @@ export const experiences: Experience[] = [
     image:
       "/images/experiences/experience-hwange-national-park-day-safari-1.webp",
     gallery: [
-      "/images/experiences/experience-hwange-national-park-day-safari-2.webp",  
+      "/images/experiences/experience-hwange-national-park-day-safari-2.webp",
       "/images/experiences/experience-hwange-national-park-day-safari-3.webp",
       "/images/experiences/experience-hwange-national-park-day-safari-4.webp",
       "/images/experiences/experience-hwange-national-park-day-safari-5.webp",
@@ -2343,7 +2320,7 @@ export const experiences: Experience[] = [
     destinationSlug: "zimbabwe",
     duration: "12 Days / 11 Nights",
     price: {
-      from: 4800,
+      from: 4515,
       currency: "USD",
       per: "person",
       note: "Based on 2 people sharing",
@@ -2950,7 +2927,7 @@ export const experiences: Experience[] = [
     destinationSlug: "victoria-falls",
     duration: "16 Days / 15 Nights",
     price: {
-      from: 4800,
+      from: 4820,
       currency: "USD",
       per: "person",
       note: "Price calculated based on confirmed accommodation, activities and group size",
@@ -2959,7 +2936,8 @@ export const experiences: Experience[] = [
       "A 16-day journey through Zimbabwe, Zambia and Malawi combining Victoria Falls, river adventures, wildlife safaris, walking experiences and the beaches of Lake Malawi.",
     description:
       "Experience three of Southern Africa's most spectacular destinations on one carefully planned 16-day adventure. Begin in Victoria Falls with the mighty Zambezi River, guided Falls walks and wildlife encounters before crossing into Zambia for Livingstone and the Zambian side of Victoria Falls. Continue east into the legendary South Luangwa Valley for game drives and a guided walking safari, then cross into Malawi for a slower-paced lakeside escape around Lake Malawi and Cape Maclear. This journey balances wildlife, adventure, culture, scenic road travel and time to relax, creating a complete Southern African experience.",
-    image: "/images/experiences/experience-zimbabwe-zambia-malawi-safari-adventure-1.webp",
+    image:
+      "/images/experiences/experience-zimbabwe-zambia-malawi-safari-adventure-1.webp",
     gallery: [],
     highlights: [
       "16 days across Zimbabwe, Zambia and Malawi",
@@ -3479,7 +3457,7 @@ export const experiences: Experience[] = [
     destinationSlug: "victoria-falls",
     duration: "5 Days / 4 Nights",
     price: {
-      from: 2850,
+      from: 2482,
       currency: "USD",
       per: "person",
       note: "Price calculated based on selected accommodation and group size",
@@ -3488,7 +3466,8 @@ export const experiences: Experience[] = [
       "Experience the power of Victoria Falls and the wildlife of Botswana's Chobe National Park on a 5-day safari escape combining waterfalls, river cruises and game drives.",
     description:
       "Discover two of Southern Africa's most iconic destinations on one seamless 5-day journey. Begin in Victoria Falls with a guided rainforest tour and a spectacular Zambezi sunset cruise before crossing into Botswana for two nights in Kasane. Explore Chobe National Park on a river safari and guided 4x4 game drive, with excellent opportunities to see elephants, hippos, buffalo, crocodiles and a wide variety of birdlife. With four nights of accommodation and carefully planned cross-border transfers, this is an ideal short safari extension from Victoria Falls.",
-    image: "/images/experiences/experience-victoria-falls-chobe-safari-escape-1.webp",
+    image:
+      "/images/experiences/experience-victoria-falls-chobe-safari-escape-1.webp",
     gallery: [],
     highlights: [
       "5 days / 4 nights",
@@ -3745,7 +3724,7 @@ export const experiences: Experience[] = [
       type: "enquiry",
       availability: "on-request",
       minimumTravellers: 1,
-      priceFrom: 0,
+      priceFrom: 2482,
       currency: "USD",
     },
     featured: true,
@@ -3759,7 +3738,7 @@ export const experiences: Experience[] = [
     destinationSlug: "victoria-falls",
     duration: "11 Days / 10 Nights",
     price: {
-      from: 3850,
+      from: 4366,
       currency: "USD",
       per: "person",
       note: "Price based on accommodation category, safari activities and group size",
@@ -3769,9 +3748,9 @@ export const experiences: Experience[] = [
       "Travel from the mighty Victoria Falls through Chobe, Elephant Sands and the Makgadikgadi Salt Pans to Maun and the extraordinary Okavango Delta.",
     description:
       "Follow one of Southern Africa's most rewarding safari routes from Victoria Falls into the heart of Botswana. Begin with the natural wonder of Victoria Falls before crossing into Botswana for wildlife-rich Chobe National Park. Continue south through the bush to Elephant Sands, where wild elephants gather around the lodge's natural waterhole, then experience the vast landscapes of the Makgadikgadi Salt Pans. From Maun, travel deeper into the Okavango region for an immersive Delta safari combining waterways, wildlife and wilderness. This 11-day journey brings together waterfalls, river safaris, elephants, salt pans, traditional communities and one of Africa's greatest inland wildernesses.",
-    image: "/images/experiences/experience-victoria-falls-okavango-wild-journey-1.webp",
-    gallery: [
-    ],
+    image:
+      "/images/experiences/experience-victoria-falls-okavango-wild-journey-1.webp",
+    gallery: [],
     highlights: [
       "Victoria Falls",
       "Guided Victoria Falls rainforest tour",
@@ -4181,7 +4160,7 @@ export const experiences: Experience[] = [
       type: "enquiry",
       availability: "on-request",
       minimumTravellers: 2,
-      priceFrom: 0,
+      priceFrom: 4366,
       currency: "USD",
     },
     featured: true,
@@ -4205,9 +4184,9 @@ export const experiences: Experience[] = [
       "Experience the best of Southern Africa in 11 days, combining Cape Town's iconic landscapes, a Big Five safari in Kruger, Victoria Falls and a wildlife-rich Chobe safari.",
     description:
       "Discover four of Southern Africa's most memorable destinations on one carefully planned 11-day journey. Begin in Cape Town with Table Mountain, the Cape Peninsula and the city's spectacular coastline before flying north-east to Kruger National Park for an authentic African safari. Continue to Victoria Falls in Zimbabwe to experience one of the world's great natural wonders and cruise the Zambezi at sunset. Finish in Botswana with a Chobe safari combining river wildlife viewing and a 4x4 game drive. This itinerary balances city, nature, wildlife and adventure while using regional flights and private transfers to make the route comfortable and practical.",
-    image: "/images/experiences/experience-cape-town-kruger-victoria-falls-chobe-1.webp",
-    gallery: [
-    ],
+    image:
+      "/images/experiences/experience-cape-town-kruger-victoria-falls-chobe-1.webp",
+    gallery: [],
     highlights: [
       "Cape Town",
       "Table Mountain",
@@ -4630,8 +4609,7 @@ export const experiences: Experience[] = [
     description:
       "Experience the extraordinary contrasts of Namibia on a carefully designed 10-day safari through the country's most iconic regions. Begin in Windhoek before travelling into the Namib Desert to explore Sossusvlei and Deadvlei. Continue to the Atlantic coast for Swakopmund, travel through dramatic Damaraland to discover ancient rock engravings and desert-adapted wildlife, then finish with game drives in Etosha National Park.",
     image: "/images/experiences/experience-ultimate-namibia-safari-1.webp",
-    gallery: [
-    ],
+    gallery: [],
     highlights: [
       "Windhoek",
       "Namib Desert",
@@ -4985,7 +4963,7 @@ export const experiences: Experience[] = [
     destinationSlug: "zimbabwe-botswana",
     duration: "7 Days / 6 Nights",
     price: {
-      from: 2099,
+      from: 2413,
       currency: "USD",
       per: "person",
       note: "Based on 2 people sharing",
@@ -4995,14 +4973,8 @@ export const experiences: Experience[] = [
       "Experience the best of Zimbabwe and Botswana on a 7-day safari adventure through Hwange National Park, Victoria Falls and Chobe National Park.",
     description:
       "Discover the wild heart of Southern Africa on a 7-day journey through Zimbabwe and Botswana. Explore the wildlife-rich plains of Hwange National Park, experience the spectacular Victoria Falls, cruise along the Zambezi River at sunset, enjoy an unforgettable Boma Dinner & Drum Show, and cross into Botswana for exceptional wildlife experiences in Chobe National Park. This carefully designed safari combines game drives, river cruises, cultural experiences and comfortable accommodation into one memorable adventure.",
-    image: "/images/experiences/experience-wild-zimbabwe-botswana.webp",
-    gallery: [
-      "/images/experiences/experience-wild-zimbabwe-botswana-1.webp",
-      "/images/experiences/experience-wild-zimbabwe-botswana-2.webp",
-      "/images/experiences/experience-wild-zimbabwe-botswana-3.webp",
-      "/images/experiences/experience-wild-zimbabwe-botswana-4.webp",
-      "/images/experiences/experience-wild-zimbabwe-botswana-5.webp",
-    ],
+    image: "/images/experiences/experience-image-placeholder.svg",
+    gallery: [],
     highlights: [
       "Hwange National Park",
       "Full-day Hwange safari",
@@ -5179,7 +5151,8 @@ export const experiences: Experience[] = [
           },
           {
             title: "Lunch",
-            description: "Enjoy lunch before your afternoon wildlife experience.",
+            description:
+              "Enjoy lunch before your afternoon wildlife experience.",
           },
           {
             title: "Chobe River Safari Cruise",
@@ -5282,5 +5255,556 @@ export const experiences: Experience[] = [
       currency: "USD",
     },
     featured: true,
+  },
+  {
+    id: "ultimate-zimbabwe-botswana-safari",
+    slug: "8-day-victoria-falls-chobe-moremi-okavango-safari",
+    title: "The Ultimate Zimbabwe & Botswana Safari",
+    category: "multi-day-trip",
+    destination: "Zimbabwe & Botswana",
+    destinationSlug: "zimbabwe-botswana",
+    duration: "8 Days / 7 Nights",
+    price: {
+      from: 3450,
+      currency: "USD",
+      per: "person",
+      note: "From price per person",
+    },
+    groupSize: "2-8 guests",
+    shortDescription:
+      "Discover Victoria Falls, Chobe, Moremi and the Okavango Delta on an 8-day private guided safari through Zimbabwe and Botswana.",
+    description:
+      "Begin at the magnificent Victoria Falls before crossing into Botswana for a wildlife journey through Chobe National Park, Moremi Game Reserve and the Okavango Delta. Enjoy rainforest viewpoints and a Zambezi sunset cruise, a Chobe River safari, guided game drives and Delta activities such as a traditional mokoro excursion where water levels allow. Private road transfers and light aircraft connections bring together comfortable accommodation and some of Southern Africa's most remarkable wildlife landscapes. The final route, camps and flight arrangements are selected to suit availability and are confirmed with your quotation.",
+    image:
+      "/images/experiences/experience-victoria-falls-okavango-wild-journey-1.webp",
+    gallery: [],
+    highlights: [
+      "Victoria Falls guided rainforest tour",
+      "Zambezi River sunset cruise",
+      "Cross-border journey from Zimbabwe into Botswana",
+      "Chobe National Park game drive",
+      "Chobe River wildlife cruise",
+      "Moremi Game Reserve safari",
+      "Morning and afternoon game drives",
+      "Okavango Delta wilderness experience",
+      "Mokoro excursion, subject to water levels",
+      "Light aircraft transfers within Botswana",
+      "Private guided safari for 2-8 guests",
+    ],
+    included: [
+      "7 nights accommodation",
+      "Daily breakfast",
+      "Selected lunches and dinners as specified in the confirmed itinerary",
+      "Victoria Falls Airport transfers",
+      "Private road transfers as specified",
+      "Professional English-speaking safari guides",
+      "Guided Victoria Falls rainforest tour",
+      "Zambezi River sunset cruise",
+      "Chobe River safari cruise",
+      "Chobe National Park game drive",
+      "Moremi Game Reserve game drives",
+      "Okavango Delta safari activities as specified",
+      "Mokoro excursion where available and subject to water levels",
+      "Botswana light aircraft transfers as specified in the confirmed itinerary",
+      "Park and reserve fees for included activities",
+      "Botswana border transfer assistance",
+      "Bottled drinking water during scheduled road transfers",
+    ],
+    excluded: [
+      "International flights",
+      "Flights not specifically included in the confirmed itinerary",
+      "Travel insurance",
+      "Zimbabwe and Botswana visa fees, where applicable",
+      "Meals not specifically listed",
+      "Drinks and alcoholic beverages",
+      "Personal expenses and laundry",
+      "Tips and gratuities",
+      "Optional Victoria Falls adventure activities",
+      "Additional activities not listed in the confirmed itinerary",
+      "Excess baggage charges on light aircraft",
+      "Items of a personal nature",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival in Victoria Falls",
+        location: "Victoria Falls, Zimbabwe",
+        overnight: "Victoria Falls",
+        meals: ["Dinner"],
+        activities: [
+          {
+            title: "Airport Arrival and Meet Your Representative",
+            description:
+              "Meet your Zazu Adventures representative at Victoria Falls Airport.",
+          },
+          {
+            title: "Transfer and Check-In",
+            description:
+              "Transfer to your selected accommodation, check in and relax after your journey.",
+          },
+          {
+            title: "Welcome to Victoria Falls",
+            description:
+              "Depending on your arrival time, explore town or browse the local craft markets before dinner.",
+          },
+        ],
+      },
+      {
+        day: 2,
+        title: "Victoria Falls Rainforest Tour and Zambezi Sunset Cruise",
+        location: "Victoria Falls, Zimbabwe",
+        overnight: "Victoria Falls",
+        meals: ["Breakfast", "Dinner"],
+        activities: [
+          {
+            title: "Guided Victoria Falls Tour",
+            description:
+              "Explore rainforest pathways and viewpoints with a knowledgeable local guide, learning about the Falls' geology, history and cultural significance.",
+          },
+          {
+            title: "Free Time",
+            description:
+              "Enjoy time to relax or arrange optional activities in Victoria Falls.",
+          },
+          {
+            title: "Zambezi River Sunset Cruise",
+            description:
+              "Cruise the Zambezi at sunset and look out for hippos, crocodiles, elephants and other wildlife along the riverbanks.",
+          },
+        ],
+      },
+      {
+        day: 3,
+        title: "Victoria Falls to Chobe National Park",
+        location: "Victoria Falls, Zimbabwe → Kasane, Botswana",
+        overnight: "Kasane",
+        meals: ["Breakfast", "Lunch", "Dinner"],
+        activities: [
+          {
+            title: "Cross-Border Transfer to Kasane",
+            description:
+              "Travel from Victoria Falls towards the Kazungula border, complete immigration formalities and continue to Kasane.",
+          },
+          {
+            title: "Lodge Check-In and Lunch",
+            description:
+              "Check in to your selected accommodation and enjoy lunch before the afternoon activity.",
+          },
+          {
+            title: "Chobe River Safari Cruise",
+            description:
+              "Explore the Chobe River by boat, with opportunities to see elephants, buffalo, hippos, crocodiles and birdlife.",
+          },
+        ],
+      },
+      {
+        day: 4,
+        title: "Chobe Safari and Transfer to Moremi",
+        location: "Chobe National Park → Moremi / Khwai, Botswana",
+        overnight: "Moremi / Khwai region",
+        meals: ["Breakfast", "Lunch", "Dinner"],
+        activities: [
+          {
+            title: "Morning Chobe Game Drive",
+            description:
+              "Set out with a safari guide to explore Chobe National Park and look for elephants, buffalo, giraffes, antelope and predators.",
+          },
+          {
+            title: "Lunch and Light Aircraft Transfer",
+            description:
+              "After lunch, travel towards the Moremi region by light aircraft. The airstrip and flight arrangements depend on the selected camp.",
+          },
+          {
+            title: "Arrival at Safari Camp",
+            description:
+              "Meet the camp team, transfer to your accommodation and settle in before dinner.",
+          },
+        ],
+      },
+      {
+        day: 5,
+        title: "Full-Day Moremi Game Reserve Safari",
+        location: "Moremi Game Reserve, Botswana",
+        overnight: "Moremi / Khwai region",
+        meals: ["Breakfast", "Lunch", "Dinner"],
+        activities: [
+          {
+            title: "Morning Game Drive",
+            description:
+              "Explore Moremi's floodplains, lagoons, woodland and grasslands in a 4x4 safari vehicle with an experienced guide.",
+          },
+          {
+            title: "Lunch and Rest at Camp",
+            description:
+              "Return to camp for lunch and time to relax during the warmer part of the day.",
+          },
+          {
+            title: "Afternoon Game Drive",
+            description:
+              "Head back into the reserve to look for elephants, giraffes, buffalo, antelope, lions, leopards and other wildlife.",
+          },
+        ],
+      },
+      {
+        day: 6,
+        title: "Moremi to the Okavango Delta",
+        location: "Moremi / Khwai → Okavango Delta, Botswana",
+        overnight: "Okavango Delta",
+        meals: ["Breakfast", "Lunch", "Dinner"],
+        activities: [
+          {
+            title: "Transfer into the Delta",
+            description:
+              "Travel to your Okavango Delta camp by light aircraft, depending on camp location and the confirmed arrangements.",
+          },
+          {
+            title: "Camp Arrival and Lunch",
+            description:
+              "Meet the camp team, transfer to your accommodation and enjoy lunch and time to settle in.",
+          },
+          {
+            title: "First Delta Activity",
+            description:
+              "Enjoy a mokoro excursion or guided nature activity, subject to seasonal water levels and camp operations.",
+          },
+        ],
+      },
+      {
+        day: 7,
+        title: "Full-Day Okavango Delta Safari",
+        location: "Okavango Delta, Botswana",
+        overnight: "Okavango Delta",
+        meals: ["Breakfast", "Lunch", "Dinner"],
+        activities: [
+          {
+            title: "Morning Delta Exploration",
+            description:
+              "Depending on camp location and conditions, explore the Delta by mokoro, motorboat, guided walk or land-based safari.",
+          },
+          {
+            title: "Lunch and Relaxation",
+            description:
+              "Return to camp for lunch and a break before the afternoon experience.",
+          },
+          {
+            title: "Afternoon Safari Activity",
+            description:
+              "Continue exploring the Delta's waterways and wildlife with your camp guide. Activities depend on seasonal water levels and local conditions.",
+          },
+        ],
+      },
+      {
+        day: 8,
+        title: "Okavango Delta to Maun and Departure",
+        location: "Okavango Delta → Maun, Botswana",
+        meals: ["Breakfast"],
+        activities: [
+          {
+            title: "Breakfast and Check-Out",
+            description:
+              "Enjoy breakfast at camp and, if time permits, a final short morning activity.",
+          },
+          {
+            title: "Light Aircraft Transfer to Maun",
+            description:
+              "Travel from the Delta to Maun Airport on the flight arranged for your selected camp and departure schedule.",
+          },
+          {
+            title: "Onward Departure",
+            description:
+              "Connect with your onward flight from Maun and conclude your Zimbabwe and Botswana safari.",
+          },
+        ],
+      },
+    ],
+    faqs: [],
+    accommodation: {
+      standard:
+        "Comfortable hotels, guesthouses and selected safari lodges and camps, subject to availability",
+      upgrade:
+        "4-star hotels, luxury safari lodges and premium tented camps available on request",
+    },
+    travelStyle: ["Private guided safari"],
+    transport:
+      "Private road transfers and Botswana light aircraft connections as specified in the confirmed itinerary. Flight routing depends on selected camps and availability.",
+    bestTimeToVisit:
+      "May to October is popular for wildlife viewing in Chobe, Moremi and the Okavango Delta. November to April brings greener landscapes and excellent birdwatching. Okavango water levels and mokoro activities vary by season.",
+    importantNotes: [
+      "From USD 3,450 per person. Final pricing depends on the selected accommodation, camp availability, group size and light aircraft routing.",
+      "Moremi and Okavango Delta transfers and airstrips depend on the selected camps and flight availability.",
+      "Mokoro and other water-based activities are subject to seasonal water levels and camp operations.",
+      "Light aircraft have baggage limits; confirm allowance before travel.",
+      "Border crossing times can vary. Travellers are responsible for valid passports, visas and required travel documents.",
+      "Wildlife sightings are not guaranteed.",
+    ],
+    seo: {
+      metaTitle:
+        "8-Day Victoria Falls, Chobe, Moremi & Okavango Delta Safari",
+      metaDescription:
+        "Explore Victoria Falls, Chobe National Park, Moremi Game Reserve and the Okavango Delta on an 8-day Zimbabwe and Botswana safari.",
+      keywords: [
+        "Victoria Falls safari",
+        "Botswana safari",
+        "Chobe National Park safari",
+        "Moremi Game Reserve safari",
+        "Okavango Delta safari",
+        "Zimbabwe Botswana tour",
+        "8-day African safari",
+        "Victoria Falls and Chobe tour",
+        "Botswana wildlife safari",
+        "Okavango Delta mokoro safari",
+        "Moremi wildlife experience",
+        "Chobe River cruise",
+        "African safari holiday",
+        "Zimbabwe and Botswana holiday",
+        "Southern Africa safari package",
+      ],
+      canonicalSlug: "8-day-victoria-falls-chobe-moremi-okavango-safari",
+    },
+    booking: {
+      type: "enquiry",
+      availability: "on-request",
+      minimumTravellers: 2,
+      priceFrom: 3450,
+      currency: "USD",
+    },
+  },
+  {
+    id: "elephant-capital-victoria-falls-chobe-safari",
+    slug: "elephant-capital-victoria-falls-chobe-safari",
+    title: "The Elephant Capital, Victoria Falls & Chobe Safari",
+    category: "multi-day-trip",
+    destination: "Zimbabwe & Botswana",
+    destinationSlug: "zimbabwe-botswana",
+    duration: "5 Days / 4 Nights",
+    price: {
+      from: 2895,
+      currency: "USD",
+      per: "person",
+      note: "Per person",
+    },
+    shortDescription:
+      "Start with Hwange National Park, Zimbabwe's Elephant Capital, continue to Victoria Falls and finish with a Chobe River safari in Botswana.",
+    description:
+      "Begin in Hwange National Park, known for its remarkable elephant population, and enjoy guided game drives in Zimbabwe's largest wildlife reserve. Continue to Victoria Falls for a guided rainforest tour and a Zambezi sunset cruise before crossing into Botswana. Conclude in Kasane with a Chobe River safari cruise and onward transfer to Kasane Airport or your next accommodation. This four-night itinerary combines wildlife, one of Africa's great natural landmarks and a cross-border river safari.",
+    image: "/images/experiences/victoria-falls-hwange-chobe.png",
+    gallery: [
+      "/images/experiences/experience-hwange-national-park-day-safari-1.webp",
+      "/images/experiences/experience-victoria-falls-chobe-safari-escape-1.webp",
+      "/images/experiences/experience-chobe-national-park-day-safari-1.webp",
+    ],
+    highlights: [
+      "Begin your safari in Hwange National Park",
+      "Hwange, Zimbabwe's Elephant Capital",
+      "Afternoon and full-day Hwange game drives",
+      "Two nights in Hwange and two nights in Victoria Falls",
+      "Guided Victoria Falls rainforest tour",
+      "Zambezi River sunset cruise",
+      "Cross-border transfer from Zimbabwe into Botswana",
+      "Chobe River wildlife cruise",
+      "Finish in Kasane, Botswana",
+      "Kasane Airport or onward accommodation transfer",
+    ],
+    included: [
+      "4 nights accommodation: 2 nights in Hwange and 2 nights in Victoria Falls",
+      "Meals as specified in the itinerary",
+      "Safari guide and scheduled road transfers",
+      "Hwange National Park game drives",
+      "Guided Victoria Falls rainforest tour",
+      "Zambezi River sunset cruise",
+      "Cross-border transfer assistance into Botswana",
+      "Chobe River safari cruise",
+      "Transfer to Kasane Airport or onward accommodation",
+      "Park fees for included activities",
+    ],
+    excluded: [
+      "International flights",
+      "Travel insurance",
+      "Zimbabwe and Botswana visa fees, where applicable",
+      "Meals not specifically listed",
+      "Drinks and alcoholic beverages",
+      "Optional adventure activities at Victoria Falls",
+      "Chobe National Park game drive",
+      "Personal expenses, laundry, tips and gratuities",
+      "Additional activities not listed in the itinerary",
+      "Items of a personal nature",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Hwange National Park – The Elephant Capital",
+        location: "Hwange National Park, Zimbabwe",
+        overnight: "Hwange",
+        meals: ["Lunch", "Dinner"],
+        activities: [
+          {
+            title: "Arrival and Meet Your Safari Guide",
+            description:
+              "Arrive in the Hwange area, meet your safari guide and transfer to your selected lodge.",
+          },
+          {
+            title: "Lodge Check-In and Lunch",
+            description:
+              "Check in and enjoy lunch before heading out to explore the park.",
+          },
+          {
+            title: "Afternoon Game Drive",
+            description:
+              "Explore Hwange's diverse landscapes in search of elephants, lions, buffalo, giraffes, zebras and other wildlife.",
+          },
+        ],
+      },
+      {
+        day: 2,
+        title: "Full-Day Hwange Safari",
+        location: "Hwange National Park, Zimbabwe",
+        overnight: "Hwange",
+        meals: ["Breakfast", "Lunch", "Dinner"],
+        activities: [
+          {
+            title: "Morning Game Drive",
+            description:
+              "Set out early with your guide to explore Hwange National Park and look for its abundant wildlife.",
+          },
+          {
+            title: "Safari Lunch",
+            description:
+              "Enjoy lunch during your day in the park before continuing your wildlife exploration.",
+          },
+          {
+            title: "Afternoon Game Drive",
+            description:
+              "Continue exploring Hwange, with opportunities to see elephant herds, lions, leopards, buffalo and birdlife.",
+          },
+        ],
+      },
+      {
+        day: 3,
+        title: "Hwange to Victoria Falls – Guided Falls Experience",
+        location: "Hwange → Victoria Falls, Zimbabwe",
+        overnight: "Victoria Falls",
+        meals: ["Breakfast", "Dinner"],
+        activities: [
+          {
+            title: "Depart Hwange",
+            description:
+              "Enjoy breakfast, check out and travel by road from Hwange to Victoria Falls.",
+          },
+          {
+            title: "Hotel Check-In",
+            description:
+              "Arrive in Victoria Falls and check in to your selected accommodation.",
+          },
+          {
+            title: "Guided Victoria Falls Rainforest Tour",
+            description:
+              "Explore the rainforest pathways and viewpoints with a local guide, learning about the Falls' history and formation.",
+          },
+          {
+            title: "Evening at Leisure",
+            description:
+              "Enjoy optional activities or relax before dinner and your overnight stay.",
+          },
+        ],
+      },
+      {
+        day: 4,
+        title: "Victoria Falls – Zambezi Sunset Cruise",
+        location: "Victoria Falls, Zimbabwe",
+        overnight: "Victoria Falls",
+        meals: ["Breakfast", "Dinner"],
+        activities: [
+          {
+            title: "Leisure Morning",
+            description:
+              "Enjoy breakfast and a relaxed morning to explore town or choose an optional activity.",
+          },
+          {
+            title: "Zambezi River Sunset Cruise",
+            description:
+              "Cruise the Zambezi River and look out for elephants, hippos, crocodiles and other wildlife as the sun sets.",
+          },
+          {
+            title: "Dinner and Overnight Stay",
+            description:
+              "Return to your Victoria Falls accommodation for dinner and your final night in town.",
+          },
+        ],
+      },
+      {
+        day: 5,
+        title: "Victoria Falls to Chobe – Safari and Departure",
+        location: "Victoria Falls, Zimbabwe → Kasane, Botswana",
+        meals: ["Breakfast", "Lunch"],
+        activities: [
+          {
+            title: "Cross-Border Transfer to Kasane",
+            description:
+              "Check out after breakfast and travel from Victoria Falls through the Kazungula border crossing into Botswana, with assistance through border formalities.",
+          },
+          {
+            title: "Chobe River Safari Cruise",
+            description:
+              "Enjoy a Chobe River cruise, with opportunities to see elephants, hippos, crocodiles and other wildlife along the riverbanks.",
+          },
+          {
+            title: "Lunch and Onward Transfer",
+            description:
+              "Enjoy lunch before your transfer to Kasane Airport or your onward accommodation. The cruise and transfer schedule is arranged around your border crossing and departure time.",
+          },
+        ],
+      },
+    ],
+    faqs: [],
+    accommodation: {
+      standard:
+        "Selected safari lodge in Hwange and comfortable hotel or guesthouse in Victoria Falls",
+      upgrade:
+        "Upgraded safari lodges and hotels available on request, subject to availability",
+    },
+    travelStyle: ["Guided safari"],
+    transport:
+      "Scheduled road transfers from Hwange through Victoria Falls to Kasane, including cross-border assistance.",
+    bestTimeToVisit:
+      "The dry season from May to October is popular for wildlife viewing as animals often gather around water sources. November to April brings greener landscapes and excellent birdwatching.",
+    importantNotes: [
+      "The itinerary starts in Hwange National Park and ends in Kasane, Botswana.",
+      "Day 5 has no overnight stay in Chobe; the Chobe River cruise is scheduled around border crossing and departure arrangements.",
+      "A Chobe National Park game drive is not included. Consider extending the trip to 6 days if you would like to add one.",
+      "Hwange accommodation and arrival arrangements must be confirmed before the transfer schedule is finalized.",
+      "Border crossing times can vary. Travellers are responsible for valid passports, visas and required travel documents.",
+      "Wildlife sightings are not guaranteed.",
+    ],
+    seo: {
+      metaTitle:
+        "5-Day Elephant Capital, Victoria Falls & Chobe Safari",
+      metaDescription:
+        "Start in Hwange, explore Victoria Falls and finish with a Chobe River safari in Kasane on this 5-day Zimbabwe and Botswana journey.",
+      keywords: [
+        "Hwange Victoria Falls Chobe safari",
+        "Elephant Capital safari",
+        "Hwange National Park safari",
+        "Victoria Falls safari",
+        "Chobe River cruise",
+        "Zimbabwe Botswana safari",
+        "5-day Zimbabwe safari",
+        "5-day Botswana safari",
+        "Hwange to Victoria Falls tour",
+        "Victoria Falls to Kasane",
+        "Kasane Chobe safari",
+        "Hwange elephant safari",
+        "Victoria Falls rainforest tour",
+        "Zambezi sunset cruise",
+        "Zimbabwe Botswana holiday",
+      ],
+      canonicalSlug: "elephant-capital-victoria-falls-chobe-safari",
+    },
+    booking: {
+      type: "enquiry",
+      availability: "on-request",
+      minimumTravellers: 2,
+      priceFrom: 2895,
+      currency: "USD",
+    },
   },
 ];
