@@ -15,11 +15,13 @@ export default function ExperienceCard({
     experience.category
   );
   const priceLabel = experience.price
-    ? new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: experience.price.currency,
-        maximumFractionDigits: 0,
-      }).format(experience.price.from)
+    ? experience.price.from === undefined
+      ? experience.price.note
+      : new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: experience.price.currency,
+          maximumFractionDigits: 0,
+        }).format(experience.price.from)
     : null;
 
   return (
@@ -39,7 +41,13 @@ export default function ExperienceCard({
         </div>
         {priceLabel ? (
           <div className="absolute -left-2 top-6 z-20 rounded-br-sm rounded-t-sm bg-[#223441] px-4 py-2 shadow-lg">
-            <span className="text-2xl font-semibold text-white sm:text-xl">
+            <span
+              className={
+                experience.price?.from === undefined
+                  ? "text-sm font-semibold text-white"
+                  : "text-2xl font-semibold text-white sm:text-xl"
+              }
+            >
               {priceLabel}
             </span>
             <div

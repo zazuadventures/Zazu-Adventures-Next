@@ -58,7 +58,14 @@ export default async function TransferPage({ params }: PageProps) {
       <ExperienceItinerary itinerary={experience.itinerary} />
       <ExperienceGallery title={experience.title} gallery={experience.gallery} />
       <ExperienceFAQs faqs={experience.faqs} />
-      <ExperienceCTA />
+      <ExperienceCTA
+        message={
+          experience.slug ===
+          "victoria-falls-to-kasane-airport-private-transfer"
+            ? "Tell us your route and travel details. We’ll confirm your tailored rate with you before your booking is accepted."
+            : undefined
+        }
+      />
     </>
   );
 }

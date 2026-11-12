@@ -4,20 +4,20 @@ import Container from "../ui/Container";
 import ExperienceGrid from "../experiences/ExperienceGrid";
 import { getExperienceBySlug } from "@/lib/experiences";
 
-const featuredActivitySlugs = [
+const featuredExperienceSlugs = [
+  "victoria-falls-to-kasane-airport-private-transfer",
   "victoria-falls-guided-walking-tour",
   "zambezi-dinner-cruise",
   "victoria-falls-wildlife-safari",
   "boma-dinner-drum-show",
   "victoria-falls-flight-of-the-angels",
-  "victoria-falls-big-cat-conservation-experience",
 ] as const;
 
 export default function FeaturedExperiences() {
-  const experiences = featuredActivitySlugs.flatMap((slug) => {
+  const experiences = featuredExperienceSlugs.flatMap((slug) => {
     const experience = getExperienceBySlug(slug);
 
-    return experience?.category === "activity" ? [experience] : [];
+    return experience ? [experience] : [];
   });
 
   return (
