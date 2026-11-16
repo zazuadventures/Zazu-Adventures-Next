@@ -62,14 +62,14 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-X2LTD9P8DS"
+          src="https://www.googletagmanager.com/gtag/js?id=G-1Z2G6C3DVT"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-X2LTD9P8DS');`}
+gtag('config', 'G-1Z2G6C3DVT');`}
         </Script>
         <Script
           id="elfsight-platform"

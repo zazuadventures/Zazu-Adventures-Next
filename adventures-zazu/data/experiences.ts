@@ -4973,7 +4973,7 @@ export const experiences: Experience[] = [
       "Experience the best of Zimbabwe and Botswana on a 7-day safari adventure through Hwange National Park, Victoria Falls and Chobe National Park.",
     description:
       "Discover the wild heart of Southern Africa on a 7-day journey through Zimbabwe and Botswana. Explore the wildlife-rich plains of Hwange National Park, experience the spectacular Victoria Falls, cruise along the Zambezi River at sunset, enjoy an unforgettable Boma Dinner & Drum Show, and cross into Botswana for exceptional wildlife experiences in Chobe National Park. This carefully designed safari combines game drives, river cruises, cultural experiences and comfortable accommodation into one memorable adventure.",
-    image: "/images/experiences/experience-image-placeholder.svg",
+    image: "/images/experiences/wild-zimbabwe-and-botswana.jpg",
     gallery: [],
     highlights: [
       "Hwange National Park",
@@ -5276,7 +5276,7 @@ export const experiences: Experience[] = [
     description:
       "Begin at the magnificent Victoria Falls before crossing into Botswana for a wildlife journey through Chobe National Park, Moremi Game Reserve and the Okavango Delta. Enjoy rainforest viewpoints and a Zambezi sunset cruise, a Chobe River safari, guided game drives and Delta activities such as a traditional mokoro excursion where water levels allow. Private road transfers and light aircraft connections bring together comfortable accommodation and some of Southern Africa's most remarkable wildlife landscapes. The final route, camps and flight arrangements are selected to suit availability and are confirmed with your quotation.",
     image:
-      "/images/experiences/experience-victoria-falls-okavango-wild-journey-1.webp",
+      "/images/experiences/the-ultimate-zimbabwe-and-botswana-safari.jpg",
     gallery: [],
     highlights: [
       "Victoria Falls guided rainforest tour",
@@ -5587,7 +5587,7 @@ export const experiences: Experience[] = [
       "Start with Hwange National Park, Zimbabwe's Elephant Capital, continue to Victoria Falls and finish with a Chobe River safari in Botswana.",
     description:
       "Begin in Hwange National Park, known for its remarkable elephant population, and enjoy guided game drives in Zimbabwe's largest wildlife reserve. Continue to Victoria Falls for a guided rainforest tour and a Zambezi sunset cruise before crossing into Botswana. Conclude in Kasane with a Chobe River safari cruise and onward transfer to Kasane Airport or your next accommodation. This four-night itinerary combines wildlife, one of Africa's great natural landmarks and a cross-border river safari.",
-    image: "/images/experiences/victoria-falls-hwange-chobe.png",
+    image: "/images/experiences/elephant-camp.jpeg",
     gallery: [
       "/images/experiences/experience-hwange-national-park-day-safari-1.webp",
       "/images/experiences/experience-victoria-falls-chobe-safari-escape-1.webp",
